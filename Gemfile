@@ -1,1 +1,1 @@
-gem 'jekyll-theme-primer', '~> 0.1.7'
+gem 'jekyll-theme-minimal', '~> 0.0.3'

@@ -1,6 +1,5 @@
-theme: jekyll-theme-primer
+theme: jekyll-theme-minimal
 title: Перепив программина
-description: Зловещие тайны из жизни программиста, и в частности, рассказы о судьбе объектов, пропавших в жерле сборщика мусора;
-             а также поучительные истории о нарушителях принципов SOLID.
+description: Увлекательные будни
 show_downloads: false
 timezone: Europe/Moscow
