@@ -1,6 +1,21 @@
-theme: jekyll-theme-minimal
+---
+name: Сайт Марка Шевченко о программировании
 title: Перепив программина
-description: Скучно об увлекательном. Концентрированный опыт, потерявший актуальность десять лет назад.
-show_downloads: false
+description: "Скучно об увлекательном: опыт, потерявший актуальность"
+url: http://markshevchenko.pro
+permalink: pretty
+paginate: 10
 timezone: Europe/Moscow
+highlighter: rouge
+
+exclude:
+- Gemfile
+- README.md
+
 markdown: kramdown
+
+kramdown:
+  auto_ids: true
+
+gems:
+  - jekyll-paginate
