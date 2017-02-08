@@ -3,3 +3,4 @@ title: Перепив программина
 description: Скучно об увлекательном. Концентрированный опыт, потерявший актуальность десять лет назад.
 show_downloads: false
 timezone: Europe/Moscow
+markdown: kramdown
