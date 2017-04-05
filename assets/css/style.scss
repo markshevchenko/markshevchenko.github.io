@@ -1,0 +1,417 @@
+---
+---
+
+@import "{{ site.theme }}"
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('icomoon.eot');
+  src: url('icomoon.eot?#iefix') format('embedded-opentype'),
+       url('icomoon.ttf') format('truetype'),
+       url('icomoon.woff') format('woff'),
+       url('icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
+
+  display: -ms-grid;
+  -ms-grid-columns: auto;
+  -ms-grid-rows: auto auto auto auto;
+
+  margin: 0;
+  padding: 0;
+  color: black;
+  background-color: white;
+  font-family: sans-serif;
+  font-size: 20pt;
+}
+
+header {
+  grid-column: 1;
+  grid-row: 1;
+
+  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+
+  font-size: 66.7%;
+  font-style: italic;
+  text-align: justify;
+  color: white;
+  background-color: firebrick;
+  padding: 8px;
+}
+
+header a {
+  color: white;
+}
+
+#home {
+  float: right;
+  margin: 0 0 0 8px;
+}
+
+#home img {
+  display: block;
+  width: 64px;
+}
+
+#menu {
+  grid-column: 1;
+  grid-row: 2;
+
+  -ms-grid-column: 1;
+  -ms-grid-row: 2;
+
+  display: table;
+  width: 100%;
+}
+
+#menu > ul {
+  display: table-row;
+}
+
+#menu > ul > li {
+  display: table-cell;
+  width: 50%;
+  height: 2em;
+  vertical-align: middle;
+  border: 1px dotted white;
+  background-color: darkslategray;
+}
+
+#menu > ul > li:hover {
+  background-color: firebrick;
+}
+
+nav a,
+nav a:visited {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.icon-articles,
+.icon-blog,
+.icon-github,
+.icon-stackoverflow {
+  font-family: 'icomoon';
+  font-size: 80%;
+  margin: 0 0.25em;
+}
+
+.icon-articles:before {
+  content: "\e9bd";
+}
+
+.icon-blog:before {
+  content: "\e9bf";
+}
+
+.icon-github:before {
+  content: "\eab0";
+}
+
+.icon-stackoverflow:before {
+  content: "\ead0";
+}
+
+#profiles {
+  grid-column: 1;
+  grid-row: 4;
+
+  -ms-grid-column: 1;
+  -ms-grid-row: 4;
+}
+
+#profiles > ul {
+  display: table;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#profiles > ul > li {
+  display: table-row;
+}
+
+#profiles > ul > li > a {
+  display: table-cell;
+  width: 100%;
+  height: 2em;
+  vertical-align: middle;
+  border: 1px dotted white;
+  background-color: darkslategray;
+}
+
+article {
+  grid-column: 1;
+  grid-row: 3;
+
+  -ms-grid-column: 1;
+  -ms-grid-row: 3;
+
+  padding: 0.5em;
+}
+
+footer {
+  grid-column: 1;
+  grid-row: 5;
+
+  -ms-grid-column: 1;
+  -ms-grid-row: 5;
+
+  border: 1px dotted white;
+  color: white;
+  background-color: darkslategray;
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+footer > a {
+  color: white;
+}
+
+h1 {
+  font-size: 225%;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 175%;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 150%;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 125%;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 125%;
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: serif;
+  line-height: 100%;
+  padding: 0;
+  margin: 0 0 0.25em 0;
+  color: darkslategray;
+}
+
+article > dl > dt {
+  font-weight: bold;
+}
+
+article > p, article > dl > dd {
+  text-align: justify;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+a {
+  color: deeppink;
+}
+
+a:visited {
+  color: firebrick;
+}
+
+.highlighter-rouge {
+  font-family: 'Courier';
+  font-size: 100%;
+  background-color: whitesmoke;
+}
+
+pre.highlight {
+  border: 1pt dotted gray;
+  padding: 0.5em;
+}
+
+code.highlighter-rouge {
+  padding: 0 0.5em;
+}
+
+table {
+  margin: 0;
+  width: 100%;
+}
+
+span.cp { /* macro */
+  color: firebrick;
+  font-weight: bold;
+}
+
+span.cm { /* comment */
+  color: darkgray;
+}
+
+span.kt,
+span.o,
+span.p { /* keyword type, operator, punctuation */
+  color: crimson;
+  font-weight: bold;
+}
+
+span.k,
+span.nf { /* keyword, known function */
+  font-weight: bold;
+}
+
+span.mi,
+span.s,
+span.se { /* constant, string */
+  color: crimson;
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 2.25vw;
+  }
+
+  header {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (min-device-width: 1366px) {
+  body {
+    font-family: 'Corbel';
+    grid-template-columns: 1fr max-content 280px 1fr;
+    grid-template-rows: auto 1em auto 1em auto auto auto auto;
+
+    display: -ms-grid;
+    -ms-grid-columns: 1fr max-content 280px 1fr;
+    -ms-grid-rows: auto 1em auto 1em auto auto auto auto;
+  }
+
+  header {
+    grid-column: 3;
+    grid-row: 1;
+
+    -ms-grid-column: 3;
+    -ms-grid-row: 1;
+  }
+
+  #home {
+    margin: 0;
+  }
+
+  #home img {
+    width: 264px;
+  }
+
+  #menu {
+    grid-column: 3;
+    grid-row: 3;
+
+    -ms-grid-column: 3;
+    -ms-grid-row: 3;
+
+  }
+
+  #menu > ul {
+    display: table;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #menu > ul > li {
+    display: table-row;
+  }
+
+  #menu > ul > li > a {
+    display: table-cell;
+    width: 100%;
+    height: 2em;
+    vertical-align: middle;
+    border: 1px dotted white;
+    background-color: darkslategray;
+  }
+
+  #menu > ul > li > a:hover {
+    background-color: firebrick;
+  }
+
+  #profiles {
+    grid-column: 3;
+    grid-row: 5;
+
+    -ms-grid-column: 3;
+    -ms-grid-row: 5;
+  }
+
+  article {
+    grid-column: 2;
+    grid-row: 1 / span 7;
+
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 7;
+
+    min-width: 844px;
+    max-width: 1000px;
+  }
+
+  footer {
+    grid-column: 2 / span 2;
+    grid-row: 8;
+
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    -ms-grid-row: 8;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Gabriola';
+  }
+
+  .highlighter-rouge {
+    font-family: 'Consolas';
+  }
+}
+
+@media print {
+  body {
+    display: block;
+    font-family: 'Corbel';
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Gabriola';
+    page-break-after: avoid;
+  }
+
+  .highlighter-rouge {
+    font-family: 'Consolas';
+  }
+
+  header,
+  #menu,
+  #profiles,
+  footer {
+    display: none;
+  }
+}
