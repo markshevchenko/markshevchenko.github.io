@@ -1,6 +1,6 @@
 ---
-name: Сайт Марка Шевченко о программировании
-title: Перепив программина
+lang: ru-RU
+title: "Профессия: программист"
 description: "Скучно об увлекательном: опыт, потерявший актуальность"
 url: http://markshevchenko.pro
 permalink: pretty
@@ -19,3 +19,9 @@ kramdown:
 
 gems:
   - jekyll-paginate
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
