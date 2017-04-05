@@ -41,7 +41,8 @@ header {
   padding: 8px;
 }
 
-header a {
+header a,
+header a:visited {
   color: white;
 }
 
