@@ -250,11 +250,13 @@ table {
 
 .upbeat {
   position: relative;
-  top: -0.5em;
+  top: -0.25em;
 }
 
 .lyrics {
   margin-left: 8em;
+  font-style: italic;
+  white-space: pre;
 }
 
 span.cp { /* macro */
