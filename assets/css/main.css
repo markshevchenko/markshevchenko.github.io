@@ -248,6 +248,15 @@ table {
   width: 100%;
 }
 
+.upbeat {
+  position: relative;
+  top: -0.5em;
+}
+
+.lyrics {
+  margin-left: 8em;
+}
+
 span.cp { /* macro */
   color: firebrick;
   font-weight: bold;
