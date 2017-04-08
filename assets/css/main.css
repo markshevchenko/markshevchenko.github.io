@@ -53,7 +53,7 @@ header a:visited {
 
 #home img {
   display: block;
-  width: 64px;
+  width: 100%;
 }
 
 #menu {
@@ -326,7 +326,7 @@ span.se { /* constant, string */
   }
 
   #home img {
-    width: 264px;
+    width: 280px;
   }
 
   #menu {
