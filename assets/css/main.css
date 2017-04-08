@@ -32,23 +32,6 @@ header {
 
   -ms-grid-column: 1;
   -ms-grid-row: 1;
-
-  font-size: 66.7%;
-  font-style: italic;
-  text-align: justify;
-  color: white;
-  background-color: firebrick;
-  padding: 8px;
-}
-
-header a,
-header a:visited {
-  color: white;
-}
-
-#home {
-  float: right;
-  margin: 0 0 0 8px;
 }
 
 #home img {
@@ -321,10 +304,6 @@ span.se { /* constant, string */
     -ms-grid-row: 1;
   }
 
-  #home {
-    margin: 0;
-  }
-
   #home img {
     width: 280px;
   }
@@ -335,7 +314,6 @@ span.se { /* constant, string */
 
     -ms-grid-column: 3;
     -ms-grid-row: 3;
-
   }
 
   #menu > ul {
