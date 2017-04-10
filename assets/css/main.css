@@ -269,6 +269,12 @@ span.se { /* constant, string */
   color: crimson;
 }
 
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 10pt;
+  }
+}
+
 @media screen and (max-width: 640px) {
   body {
     font-size: 12pt;
