@@ -212,12 +212,14 @@ a:visited {
 }
 
 .highlighter-rouge {
-  font-family: 'Courier';
+  font-family: monospace;
   font-size: 100%;
   background-color: whitesmoke;
 }
 
 pre.highlight {
+  font-family: monospace;
+  font-size: 100%;
   border: 1pt dotted gray;
   padding: 0.5em;
 }
