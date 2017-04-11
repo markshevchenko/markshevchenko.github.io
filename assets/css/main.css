@@ -134,32 +134,32 @@ nav a:visited {
 }
 
 h1 {
-  font-size: 225%;
+  font-size: 161%;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 200%;
+  font-size: 146%;
   font-weight: bold;
 }
 
 h3 {
-  font-size: 175%;
+  font-size: 133%;
   font-weight: bold;
 }
 
 h4 {
-  font-size: 150%;
-  font-weight: bold;
+  font-size: 121%;
+  font-weight: ;
 }
 
 h5 {
-  font-size: 125%;
+  font-size: 110%;
   font-weight: bold;
 }
 
 h6 {
-  font-size: 125%;
+  font-size: 110%;
   font-weight: normal;
 }
 
@@ -272,36 +272,6 @@ span.se { /* constant, string */
 @media screen and (max-width: 960px) {
   body {
     font-size: 16pt;
-  }
-
-  h1 {
-    font-size: 161%;
-    font-weight: bold;
-  }
-
-  h2 {
-    font-size: 146%;
-    font-weight: bold;
-  }
-
-  h3 {
-    font-size: 133%;
-    font-weight: bold;
-  }
-
-  h4 {
-    font-size: 121%;
-    font-weight: ;
-  }
-
-  h5 {
-    font-size: 110%;
-    font-weight: bold;
-  }
-
-  h6 {
-    font-size: 110%;
-    font-weight: normal;
   }
 }
 
