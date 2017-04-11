@@ -21,14 +21,15 @@ body {
 }
 
 header {
+  padding: 4px 0;
 }
 
 article {
-  padding: 0 8px;
+  padding: 4px 8px;
 }
 
 footer {
-  padding: 0 8px;
+  padding: 4px 8px;
   border: 1px dotted white;
 
   color: white;
@@ -133,28 +134,28 @@ nav a:visited {
 }
 
 h1 {
-  font-size: 161%;
+  font-size: 177%;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 146%;
-  font-weight: bold;
+  font-size: 161%;
+  font-weight: normal;
 }
 
 h3 {
-  font-size: 133%;
-  font-weight: bold;
+  font-size: 146%;
+  font-weight: normal;
 }
 
 h4 {
-  font-size: 121%;
-  font-weight: ;
+  font-size: 133%;
+  font-weight: normal;
 }
 
 h5 {
-  font-size: 110%;
-  font-weight: bold;
+  font-size: 121%;
+  font-weight: normal;
 }
 
 h6 {
