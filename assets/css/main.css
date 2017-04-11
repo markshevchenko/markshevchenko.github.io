@@ -21,15 +21,14 @@ body {
 }
 
 header {
-  padding: 8px 0;
 }
 
 article {
-  padding: 8px 0;
+  padding: 0 8px;
 }
 
 footer {
-  padding: 8px 0;
+  padding: 0 8px;
   border: 1px dotted white;
 
   color: white;
