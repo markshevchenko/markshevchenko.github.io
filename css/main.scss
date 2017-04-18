@@ -1,6 +1,7 @@
 ﻿---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Комментарий, чтобы Jekyll правильно обработал файл.
 ---
+
 @charset "utf-8";
 
 $base-font-family: Corbel, Trebuchet MS, Helvetica, Trebuchet, sans-serif;
@@ -18,8 +19,6 @@ $grey-color:       grey;
 $grey-color-light: whitesmoke;
 $grey-color-dark:  darkslategrey;
 
-@import
-  "base",
-  "layout",
-  "syntax-highlighting"
-;
+@import "base";
+@import "layout";
+@import "syntax-highlighting";
