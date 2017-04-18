@@ -103,8 +103,9 @@ nav a:visited {
   font-family: 'icomoon';
   font-size: $small-font-size;
 
-  width: 2em;
+  display: inline-block;
   margin: 0 $spacing-unit/2;
+  width: 2em;
 }
 
 .icon-articles:before {
