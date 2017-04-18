@@ -1,11 +1,11 @@
 ---
 lang: ru-RU
+encoding: utf-8
 title: "Профессия: программист"
 description: "Скучно об увлекательном: опыт, потерявший актуальность"
 url: http://markshevchenko.pro
 permalink: pretty
 paginate: 10
-timezone: Europe/Moscow
 highlighter: rouge
 
 exclude:
