@@ -153,6 +153,13 @@ h1, h2, h3, h4, h5, h6, .date {
   color: $grey-color-dark;
 }
 
+blockquote {
+  margin-left: $spacing-unit * 2;
+  margin-bottom: 1em;
+
+  font-style: italic;
+}
+
 article > dl > dt {
   font-weight: bold;
 }
