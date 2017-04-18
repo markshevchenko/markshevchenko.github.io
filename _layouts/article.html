@@ -8,11 +8,11 @@ layout: default
 {{content}}
 
 {% if page.previous or page.up or page.next %}
-<nav id="relations">
+<div id="relations">
   <ul>
     <li>{% if page.previous %}<a href="{{ page.previous | relative_url }}">Назад</a>{% endif %}</li>
     <li>{% if page.up %}<a href="{{ page.up | relative_url }}">Содержание</a>{% endif %}</li>
     <li>{% if page.next %}<a href="{{ page.next | relative_url }}">Вперёд</a>{% endif %}</li>
   </ul>
-</nav>
+</div>
 {% endif %}

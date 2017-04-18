@@ -6,25 +6,23 @@ title: Блог
 <h1>Блог</h1>
 
 {% for post in paginator.posts %}
-  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-  <p class="author">
-    <span class="date">{{ post.date | date: "%d-%m-%Y" }}</span>
-  </p>
-  <div class="content">
-    {{ post.content }}
-  </div>
+  <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+  <p class="date">{{ post.date | date: "%d-%m-%Y" }}</p>
+  {{ post.excerpt }}
 {% endfor %}
 
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">Назад</a>
-  {% else %}
-    <span class="previous">Назад</span>
-  {% endif %}
-  <span class="page_number ">Страница {{ paginator.page }} из {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Вперёд</a>
-  {% else %}
-    <span class="next">Вперёд</span>
-  {% endif %}
+<div id="relations">
+  <ul>
+    {% if paginator.previous_page %}
+      <li><a href="{{ paginator.previous_page_path }}" class="previous">Назад</a></li>
+    {% else %}
+      <li>Назад</li>
+    {% endif %}
+      <li>Страница {{ paginator.page }} из {{ paginator.total_pages }}</li>
+    {% if paginator.next_page %}
+      <li><a href="{{ paginator.next_page_path }}" class="next">Вперёд</a></li>
+    {% else %}
+      <li class="next">Вперёд</li>
+    {% endif %}
+  </ul>
 </div>
