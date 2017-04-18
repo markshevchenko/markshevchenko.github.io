@@ -1,0 +1,16 @@
+﻿---
+layout: default
+---
+
+<h1>{{ page.title }}{% if page.subtitle %}<br /><small>{{ page.subtitle }}</small>{% endif %}</h1>
+{% if page.description %}<p>{{ page.description }}</p>{% endif %}
+
+{{content}}
+
+<nav class="relations">
+  <ul>
+    <li>{% if page.previous %}<a href="{{ page.previous | relative_url }}">Назад</a>{{ %endif }</li>
+    <li>{% if page.up %}<a href="{{ page.up | relative_url }}">Содержание</a>{{ %endif }</li>
+    <li>{% if page.next %}<a href="{{ page.next | relative_url }}">Вперёд</a>{{ %endif }</li>
+  </ul>
+</nav>
