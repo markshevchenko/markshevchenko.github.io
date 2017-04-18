@@ -4,8 +4,9 @@ encoding: utf-8
 title: "Профессия: программист"
 description: "Скучно об увлекательном: опыт, потерявший актуальность"
 url: http://markshevchenko.pro
+permalink: pretty
 paginate: 10
-paginate_path: "/posts/page:num"
+paginate_path: "/posts/:num"
 highlighter: rouge
 
 exclude:
@@ -23,3 +24,17 @@ gems:
 sass:
   sass_dir: _sass
   style: :compressed
+
+defaults:
+  -
+    scope:
+      path: "articles"
+      type: "pages"
+    values:
+      layout: "article"
+  - 
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
