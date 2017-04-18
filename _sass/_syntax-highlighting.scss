@@ -1,0 +1,29 @@
+﻿span.cp { /* macro */
+  font-weight: bold;
+
+  color: $brand-color-dark;
+}
+
+span.cm { /* comment */
+  color: $grey-color-dark;
+}
+
+span.kt,
+span.o,
+span.p { /* keyword type, operator, punctuation */
+  font-weight: bold;
+
+  color: $brand-color;
+}
+
+span.k,
+span.nf { /* keyword, known function */
+  font-weight: bold;
+}
+
+span.mi,
+span.s,
+span.se { /* constant, string */
+  color: $brand-color;
+}
+
