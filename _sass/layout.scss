@@ -163,6 +163,23 @@ article > dl > dd {
   margin-bottom: 1em;
 }
 
+#relations {
+  display: table;
+  table-layout: fixed;
+  
+  width: 100%;
+}
+
+#relations > ul {
+  display: table-row;
+}
+
+#relations > ul > li {
+  display: table-cell;
+
+  width: 33.3%;
+}
+
 a {
   color: $brand-color;
 }
