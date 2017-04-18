@@ -32,9 +32,11 @@ defaults:
       type: "pages"
     values:
       layout: "article"
+      comments: "true"
   - 
     scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
+      comments: "true"
