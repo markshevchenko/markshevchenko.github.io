@@ -171,11 +171,16 @@ a:visited {
 
 code {
   font-family: $monospace-font-family;
+}
 
+code,
+pre {
   background-color: $grey-color-light;
 }
 
 pre.highlight {
+  font-family: $monospace-font-family;
+
   padding: $spacing-unit/2;
   border: 1pt dotted $grey-color-dark;
 
