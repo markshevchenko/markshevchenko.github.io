@@ -149,7 +149,6 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
   color: $grey-color-dark;
-  line-height: 172.8%;
 }
 
 article > dl > dt {
@@ -172,7 +171,7 @@ a:visited {
 
 .highlighter-rouge,
 pre.highlite {
-  font-family: Consolas, American Typewriter, Courier New, monospace;
+  font-family: $monospace-font-family;
 
   background-color: $grey-color-light;
 }
