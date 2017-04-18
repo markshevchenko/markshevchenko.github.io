@@ -7,12 +7,12 @@ layout: default
 
 {{content}}
 
-{% if page.previous or page.up or page.next %}
+{% if page.previous | page.up | page.next %}
 <div id="relations">
   <ul>
-    <li>{% if page.previous %}[Назад]({{ page.previous }}){% else %}Назад{% endif %}</li>
-    <li>{% if page.up %}[Содержание]({{ page.up }}){% else %}Содержание{% endif %}</li>
-    <li>{% if page.next %}[Вперёд]({{ page.next }}){% else %}Вперёд{% endif %}</li>
+    <li>{% if page.previous %}<a href="{{ page.previous }}">Назад</a>{% else %}Назад{% endif %}</li>
+    <li>{% if page.up %}<a href="{{ page.up }}">Содержание</a>{% else %}Содержание{% endif %}</li>
+    <li>{% if page.next %}<a href="{{ page.next }}">Вперёд</a>{% else %}Вперёд{% endif %}</li>
   </ul>
 </div>
 {% endif %}
