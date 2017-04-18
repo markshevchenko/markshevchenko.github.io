@@ -7,7 +7,7 @@ layout: default
 
 {{content}}
 
-{% if page.previous | page.up | page.next %}
+{% if page.previous or page.up or page.next %}
 <div id="relations">
   <ul>
     <li>{% if page.previous %}<a href="{{ page.previous }}">Назад</a>{% else %}Назад{% endif %}</li>
