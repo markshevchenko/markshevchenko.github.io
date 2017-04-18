@@ -9,37 +9,22 @@
   font-style: normal;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  
-  color: black;
-  background-color: white;
-
-  font-family: Corbel, Trebuchet MS, Helvetica, Trebuchet, sans-serif;
-  font-size: 18pt;
-}
-
 header {
-  padding: 4px 0;
+  padding: $spacing-unit/2 0;
 }
 
 article {
-  padding: 4px 8px;
+  padding: $spacing-unit/2 $spacing-unit;
 }
 
 footer {
-  padding: 4px 8px;
+  padding: $spacing-unit/2 $spacing-unit;
   border: 1px dotted white;
 
-  color: white;
-  background-color: darkslategray;
+  color: $background-color;
+  background-color: $grey-color-dark;
   
   text-align: center;
-}
-
-footer > a {
-  color: white;
 }
 
 #home {
@@ -67,15 +52,15 @@ footer > a {
 
   width: 100%;
   height: 2em;
-  border: 1px dotted white;
+  border: 1px dotted $background-color;
 
   vertical-align: middle;
 
-  background-color: darkslategray;
+  background-color: $grey-color-dark;
 }
 
 #menu > ul > li:hover {
-  background-color: firebrick;
+  background-color: $brand-color-dark;
 }
 
 #profiles > ul {
@@ -96,11 +81,11 @@ footer > a {
   
   width: 100%;
   height: 2em;
-  border: 1px dotted white;
+  border: 1px dotted $background-color;
   
   vertical-align: middle;
 
-  background-color: darkslategray;
+  background-color: $grey-color-dark;
 }
 
 nav a,
@@ -108,7 +93,7 @@ nav a:visited {
   font-weight: bold;
   text-decoration: none;
 
-  color: white;
+  color: $background-color;
 }
 
 .icon-articles,
@@ -118,7 +103,7 @@ nav a:visited {
   font-family: 'icomoon';
   font-size: 80%;
 
-  margin: 0 4px;
+  margin: 0 $spacing-unit/2;
 }
 
 .icon-articles:before {
@@ -139,27 +124,22 @@ nav a:visited {
 
 h1 {
   font-size: 207.4%;
-  font-weight: normal;
 }
 
 h2 {
   font-size: 172.8%;
-  font-weight: normal;
 }
 
 h3 {
   font-size: 144%;
-  font-weight: normal;
 }
 
 h4 {
   font-size: 120%;
-  font-weight: normal;
 }
 
 h5 {
   font-size: 110%;
-  font-weight: normal;
 }
 
 h6 {
@@ -168,11 +148,7 @@ h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 100%;
-  margin: 0 0 0.25em 0;
-  padding: 0;
-  
-  color: darkslategray;
+  color: $grey-color-dark;
 }
 
 article > dl > dt {
@@ -182,35 +158,33 @@ article > dl > dt {
 article > p,
 article > dl > dd {
   text-align: justify;
-
-  margin: 0 0 1em 0;
 }
 
 a {
-  color: crimson;
+  color: $brand-color;
 }
 
 a:visited {
-  color: firebrick;
+  color: $brand-color-dark;
 }
 
 .highlighter-rouge,
 pre.highlite {
   font-family: Consolas, American Typewriter, Courier New, monospace;
 
-  background-color: whitesmoke;
+  background-color: $grey-color-light;
 }
 
 pre.highlight {
-  padding: 4px;
-  border: 1pt dotted darkslategray;
+  padding: $spacing-unit/2;
+  border: 1pt dotted $grey-color-dark;
 
   overflow-x: scroll;
   overflow-y: hidden;
 }
 
 code.highlighter-rouge {
-  padding: 0 4px;
+  padding: 0 $spacing-unit/2;
 }
 
 table {
@@ -227,38 +201,9 @@ table {
 }
 
 .lyrics {
-  margin-left: 2em;
+  margin-left: $spacing-unit * 2;
   font-style: italic;
   white-space: pre;
-}
-
-span.cp { /* macro */
-  font-weight: bold;
-
-  color: firebrick;
-}
-
-span.cm { /* comment */
-  color: darkslategray;
-}
-
-span.kt,
-span.o,
-span.p { /* keyword type, operator, punctuation */
-  font-weight: bold;
-
-  color: crimson;
-}
-
-span.k,
-span.nf { /* keyword, known function */
-  font-weight: bold;
-}
-
-span.mi,
-span.s,
-span.se { /* constant, string */
-  color: crimson;
 }
 
 @media screen and (max-width: 480px) {
@@ -270,6 +215,12 @@ span.se { /* constant, string */
 @media screen and (max-width: 640px) {
   body {
     font-size: 12pt;
+  }
+}
+
+@meida screen and (max-width: 800px) {
+  body {
+    font-size: 14pt;
   }
 }
 
@@ -328,15 +279,15 @@ span.se { /* constant, string */
     
     width: 100%;
     height: 2em;
-    border: 1px dotted white;
+    border: 1px dotted $background-color;
 
     vertical-align: middle;
 
-    background-color: darkslategray;
+    background-color: $grey-color-dark;
   }
 
   #menu > ul > li > a:hover {
-    background-color: firebrick;
+    background-color: $brand-color-dark;
   }
 
   #profiles {
@@ -369,7 +320,7 @@ span.se { /* constant, string */
   }
 
   .lyrics {
-    margin-left: 8em;
+    margin-left: $spacing-unit * 8;
   }
 }
 
@@ -386,6 +337,6 @@ span.se { /* constant, string */
   }
 
   .lyrics {
-    margin-left: 8em;
+    margin-left: $spacing-unit * 8;
   }
 }
