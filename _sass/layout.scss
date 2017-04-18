@@ -101,8 +101,9 @@ nav a:visited {
 .icon-github,
 .icon-stackoverflow {
   font-family: 'icomoon';
-  font-size: 80%;
+  font-size: $small-font-size;
 
+  width: 2em;
   margin: 0 $spacing-unit/2;
 }
 
@@ -238,11 +239,11 @@ table {
 @media screen and (min-device-width: 1366px) {
   body {
     display: grid;
-    grid-template-columns: 1fr max-content 280px 1fr;
+    grid-template-columns: 1fr max-content $aside-width 1fr;
     grid-template-rows: auto 1em auto 1em auto auto auto auto;
 
     display: -ms-grid;
-    -ms-grid-columns: 1fr max-content 280px 1fr;
+    -ms-grid-columns: 1fr max-content $aside-width 1fr;
     -ms-grid-rows: auto 1em auto 1em auto auto auto auto;
   }
 
@@ -255,7 +256,7 @@ table {
   }
 
   #home img {
-    width: 280px;
+    width: $aside-width;
   }
 
   #menu {
