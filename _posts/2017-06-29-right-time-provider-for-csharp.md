@@ -104,7 +104,7 @@ As a result, `DateTimeOffset` should be considered the default date and time typ
 
 То есть `DateTime` это прошлый век, все используем `DateTimeOffset`. Пора создавать свой собственный пакет. Или нет?
 
-### Новое решине
+### Новое решение
 
 Конечно, нет. Вместо `TimeProvider` мы можем использовать `Func<DateTimeOffset>`:
 
