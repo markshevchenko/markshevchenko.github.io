@@ -9,13 +9,15 @@ date: 2017-06-29 17:15:00 +0300
 Покрыть модульными тестами код, который зависит от вызова `DateTime.Now` или `DateTimeOffset.Now`. Например, при создании
 нового *поста*, *фабрика постов* заполняет поле *дата/время создания*:
 
-    public class PostFactory
+```c#
+public class PostFactory
+{
+    public Post Create(string title, string content)
     {
-        public Post Create(string title, string content)
-        {
-            return new Post(DateTimeOffset.Now, title, content);
-        }
+        return new Post(DateTimeOffset.Now, title, content);
     }
+}
+```
 
 Как протестировать, что метод корректно заполняет поле, ведь при каждом вызове `DateTime.Now` возращает
 разные значения? Один из способов заключается в том, чтобы спрятать зависимость от недетерменированного вызова
@@ -23,56 +25,66 @@ date: 2017-06-29 17:15:00 +0300
 
 ### Классическое решение
 
-    public class TimeProvider
-    {
-        public virtaul DateTimeOffset Now { get { return DateTimeOffset.Now; } }
-    }
+```c#
+public class TimeProvider
+{
+    public virtaul DateTimeOffset Now { get { return DateTimeOffset.Now; } }
+}
+```
 
 Мы регистрируем его в контейнере IoC, например, в Autofac:
 
-    builder.RegisterType<TimeProvider>()
-           .AsSelf()
-           .SingleInstance();
+```c#
+builder.RegisterType<TimeProvider>()
+       .AsSelf()
+       .SingleInstance();
+```
 
 И *внедняем через конструктор* в фабрику постов:
 
-    public class PostFactory
-    {
-        private readonly TimeProvider timeProvider;
+```c#
+public class PostFactory
+{
+    private readonly TimeProvider timeProvider;
         
-        public PostFactory(TimeProvider timeProvider)
-        {
-            this.timeProvider = timeProvider;
-        }
-    
-        public Post Create(string title, string content)
-        {
-            return new Post(timeProvider.Now, title, content);
-        }
+    public PostFactory(TimeProvider timeProvider)
+    {
+        this.timeProvider = timeProvider;
     }
+    
+    public Post Create(string title, string content)
+    {
+        return new Post(timeProvider.Now, title, content);
+    }
+}
+```
 
 Основное преимущества класса перед `DateTime.Now` в том, что мы можем превратить его в заглушку:
 
-    public class StubTimeProvider : TimeProvider
-    {
-        public DateTimeOffset DefaultNow { get; set; }
+```c#
+public class StubTimeProvider : TimeProvider
+{
+    public DateTimeOffset DefaultNow { get; set; }
         
-        public override DateTimeOffset Now => DefaultNow;
-    }
+    public override DateTimeOffset Now => DefaultNow;
+}
+```
 
 Эта заглушка всегда возвращает одно и то же значение текущей даты/времени, что не соответствует реальности,
 зато позволяет нам тестировать код:
 
-    [TestMethod]
-    public void Create_WhenCalled_FillsCreatedAt()
-    {
-        var timeProvider = new StubTimeProvider { DefaultNow = new DateTimeOffset(2017, 06, 29, 17, 32, 10, TimeSpan.Zero) };
-        var postFactory = new PostFactory(timeProvider);
+```c#
+[TestMethod]
+public void Create_WhenCalled_FillsCreatedAt()
+{
+    var timeProvider = new StubTimeProvider { DefaultNow = new DateTimeOffset(2017, 06, 29, 17, 32, 10, TimeSpan.Zero) };
+    var postFactory = new PostFactory(timeProvider);
         
-        var post = postFactory.Create("foo", "bar");
+    var post = postFactory.Create("foo", "bar");
         
-        Assert.AreEqual(new DateTimeOffset(2017, 06, 29, 17, 32, 10, TimeSpan.Zero), post.CreatedAt);
-    }
+    Assert.AreEqual(new DateTimeOffset(2017, 06, 29, 17, 32, 10, TimeSpan.Zero), post.CreatedAt);
+}
+```
 
 ### Проблема классического решения
 
@@ -96,36 +108,42 @@ As a result, `DateTimeOffset` should be considered the default date and time typ
 
 Конечно, нет. Вместо `TimeProvider` мы можем использовать `Func<DateTimeOffset>`:
 
-    public class PostFactory
-    {
-        private readonly Func<DateTimeOffset> now;
+```c#
+public class PostFactory
+{
+    private readonly Func<DateTimeOffset> now;
         
-        public PostFactory(Func<DateTimeOffset> now)
-        {
-            this.now = now;
-        }
-    
-        public Post Create(string title, string content)
-        {
-            return new Post(now(), title, content);
-        }
+    public PostFactory(Func<DateTimeOffset> now)
+    {
+        this.now = now;
     }
+    
+    public Post Create(string title, string content)
+    {
+        return new Post(now(), title, content);
+    }
+}
+```
 
 Вот так регистрируем функцию в Autofac:
 
-    builder.RegisterInstance<Func<DateTimeOffset>(() => DateTimeOffset.Now);
+```c#
+builder.RegisterInstance<Func<DateTimeOffset>(() => DateTimeOffset.Now);
+```
 
 И вот так используем в тестах:
 
-    [TestMethod]
-    public void Create_WhenCalled_FillsCreatedAt()
-    {
-        Func<DateTimeOffset> now = () => new DateTimeOffset(2017, 06, 29, 17, 32, 10, TimeSpan.Zero);
-        var postFactory = new PostFactory(now);
+```c#
+[TestMethod]
+public void Create_WhenCalled_FillsCreatedAt()
+{
+    Func<DateTimeOffset> now = () => new DateTimeOffset(2017, 06, 29, 17, 32, 10, TimeSpan.Zero);
+    var postFactory = new PostFactory(now);
         
-        var post = postFactory.Create("foo", "bar");
+    var post = postFactory.Create("foo", "bar");
         
-        Assert.AreEqual(new DateTimeOffset(2017, 06, 29, 17, 32, 10, TimeSpan.Zero), post.CreatedAt);
-    }
+    Assert.AreEqual(new DateTimeOffset(2017, 06, 29, 17, 32, 10, TimeSpan.Zero), post.CreatedAt);
+}
+```
 
 В результате нам удалось обойтись только стандартными средствами .NET Framework, не создавать NuGet-пакетов, и не множить зависимости.
