@@ -28,7 +28,7 @@ public class PostFactory
 ```c#
 public class TimeProvider
 {
-    public virtaul DateTimeOffset Now { get { return DateTimeOffset.Now; } }
+    public virtual DateTimeOffset Now { get { return DateTimeOffset.Now; } }
 }
 ```
 
