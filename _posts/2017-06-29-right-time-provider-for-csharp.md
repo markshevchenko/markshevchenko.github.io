@@ -40,7 +40,7 @@ builder.RegisterType<TimeProvider>()
        .SingleInstance();
 ```
 
-И *внедняем через конструктор* в фабрику постов:
+И *внедряем через конструктор* в фабрику постов:
 
 ```c#
 public class PostFactory
