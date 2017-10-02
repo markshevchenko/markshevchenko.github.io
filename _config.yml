@@ -20,6 +20,9 @@ kramdown:
 
 gems:
   - jekyll-paginate
+  
+plugins:
+  - jekyll-feed
 
 sass:
   sass_dir: _sass
