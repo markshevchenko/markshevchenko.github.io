@@ -4,6 +4,7 @@ lang: ru-RU
 encoding: utf-8
 title: "Профессия: программист"
 description: "Скучно об увлекательном: опыт, потерявший актуальность"
+author: "Mark Shevchenko"
 url: http://markshevchenko.pro
 permalink: pretty
 paginate: 10
