@@ -12,7 +12,7 @@ id: github-pages
 При проталкивании (push) изменений в ветку `master` GitHub запускает генератор [Jekyll](https://jekyllrb.com/), и через несколько секунд
 публикует готовые HTML-страницы на сайте.
 
-Конечно, возможности статических сайтов ограничены, тем не менее Jekyll позволяет:
+Конечно, возможности статических сайтов ограничены, но тем не менее Jekyll позволяет:
 
 1. Вести блог.
 1. Анонсировать записи в формате [Atom](https://tools.ietf.org/html/rfc4287).
@@ -25,12 +25,12 @@ id: github-pages
 URI моей страницы https://github.com/markshevchenko, а для своего сайта я должен создать репозиторий
 [markshevchenko.github.io](https://github.com/markshevchenko/markshevchenko.github.io).
 
-Сразу после создания репозитория, сайт становится доступен по адресу http://markshevchenko.github.io, но он пока совершенно пуст.
+Сразу после создания репозитория, сайт становится доступен по адресу http://markshevchenko.github.io, но он сейчас совершенно пуст.
 
 Нажмём кнопку <kbd>Create new file</kbd> и в качестве имени укажем `_layouts/default.html`. По правилам GitHub это означает, что
 в корне проекта будет создана папка `_layouts` в которой будет создан пустой файл `default.html`. Разместим внутри шаблон:
 
-```html
+```
 {% raw %}
 <!doctype html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
