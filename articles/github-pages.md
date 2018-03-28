@@ -33,16 +33,16 @@ URI моей страницы https://github.com/markshevchenko, а для св�
 ```liquid
 <!doctype html>
 <html lang="{{ page.lang | default: site.lang }}">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
- 		<title>{% if page.title %}{{ page.title | escape }}{% else %}}{{ site.title | escape }}{% endif %}</title>
- 		<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-	</head>
-	<body>
-	{{ content }}
-	</body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  </head>
+  <body>
+    {{ content }}
+  </body>
 </html>
 ```
 {% endraw %}
@@ -65,16 +65,16 @@ excerpt: От Ады до наших дней
 ```html
 <!doctype html>
 <html lang="ru-RU">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
- 		<title>История языков программирования</title>
- 		<meta name="description" content="От Ады до наших дней">
-	</head>
-	<body>
-	<p>История языков программирования полна <em>трагедий</em> и <strong>разочарования</strong>.</p>
-	</body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>История языков программирования</title>
+    <meta name="description" content="От Ады до наших дней">
+  </head>
+  <body>
+    <p>История языков программирования полна <em>трагедий</em> и <strong>разочарования</strong>.</p>
+  </body>
 </html>
 ```
 
