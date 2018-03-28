@@ -30,8 +30,8 @@ URI моей страницы https://github.com/markshevchenko, а для св�
 Нажмём кнопку <kbd>Create new file</kbd> и в качестве имени укажем `_layouts/default.html`. По правилам GitHub это означает, что
 в корне проекта будет создана папка `_layouts` в которой будет создан пустой файл `default.html`. Разместим внутри шаблон:
 
-```
 {% raw %}
+```
 <!doctype html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 	<head>
@@ -45,13 +45,12 @@ URI моей страницы https://github.com/markshevchenko, а для св�
 	{{ content }}
 	</body>
 </html>
-{% endraw %}
 ```
+{% endraw %}
 
 В корне создадим файл `index.md`, где запишем:
 
 ```markdown
-
 ---
 layout: default
 lang: ru-RU
