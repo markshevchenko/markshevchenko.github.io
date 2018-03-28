@@ -31,7 +31,7 @@ URI моей страницы https://github.com/markshevchenko, а для св�
 в корне проекта будет создана папка `_layouts` в которой будет создан пустой файл `default.html`. Разместим внутри шаблон:
 
 {% raw %}
-```
+```liquid
 <!doctype html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 	<head>
