@@ -40,6 +40,11 @@ a {
   }
 }
 
+kbd {
+  border-radius: 0.25em;
+  border: 1ps solid $text-color;
+}
+
 %clearfix {
   &:after {
     content: "";
