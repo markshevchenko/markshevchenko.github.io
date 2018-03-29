@@ -43,6 +43,8 @@ a {
 kbd {
   border-radius: 0.25em;
   border: 1px solid $text-color;
+  box-shadow: 2px 2px;
+  padding: 0.25em;
 }
 
 %clearfix {
