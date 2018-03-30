@@ -426,6 +426,6 @@ sass:
 
 1. На NS-сервере прописать две А-записи для **prog.msk.ru**, одну на IP 192.30.252.153, вторую на 192.30.252.154.
    После этого все обращения к **prog.msk.ru** будут вести на GitHub.
-2. В репозитории GitHub зайти в раздел <kbd>Settings</kbd>, найти настройки GitHub Pages и в поле <kbd>Custom domain</kbd> ввести **prog.msk.ru**.
+2. В репозитории GitHub зайти в раздел **Settings**, найти настройки GitHub Pages и в поле **Custom domain** ввести **prog.msk.ru**.
 
 Всё.
