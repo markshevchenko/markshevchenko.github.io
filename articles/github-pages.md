@@ -28,7 +28,7 @@ id: github-pages
 
 Сразу после создания репозитория сайт становится доступен по адресу http://progmsk.github.io. Сейчас он совершенно пуст.
 
-![Пустой сайт на GitHub Pages]({{ /img/github-pages-404.png | relative_url }})
+![Пустой сайт на GitHub Pages]({{ "/img/github-pages-404.png" | relative_url }})
 
 Нажмём кнопку <kbd>Create new file</kbd> в заголовке репозитория на сайте GitHub. В качестве имени нового файала укажем **_layouts/default.html**.
 По правилам GitHub это означает, что в корне проекта будет создана папка **_layouts**, а в ней&nbsp;&mdash; файл **default.html**.
