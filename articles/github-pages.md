@@ -503,6 +503,7 @@ excerpt: Тяжела и неказиста жизнь простого прог
   <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
   {{ post.excerpt }}
 {% endfor %}
+```
 {% endraw %}
 
 Очевидно `site.posts` содержит все записи в папке **\_posts**. `post.title`&nbsp;&mdash; очевидно, содержимое свойства `title` страницы, а `post.url`&nbsp;&mdash;
