@@ -1,15 +1,21 @@
-
----
 lang: ru-RU
 encoding: utf-8
+
 title: "Профессия: программист"
 description: "Скучно об увлекательном: опыт, потерявший актуальность"
+
 author: "Mark Shevchenko"
+image: /img/markshevchenko.jpg
 url: http://markshevchenko.pro
+
 permalink: pretty
+highlighter: rouge
+
 paginate: 10
 paginate_path: "/posts/:num"
-highlighter: rouge
+
+feed:
+  path: feed.atom
 
 exclude:
 - Gemfile
