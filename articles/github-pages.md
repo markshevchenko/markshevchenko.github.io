@@ -576,16 +576,22 @@ Jekyll умеет создавать ленту новостей в формат
 и опишем имя XML-файла, куда попадут анонсы записей:
 
 ```yaml
-. . .
+lang: ru-RU
+encoding: utf-8
+
+url: http://prog.msk.ru
+title: Московский клуб программистов
+
+permalink: pretty
+highlighter: rouge
+markdown: kramdown
+
 gems:
   - jekyll-paginate
   - jekyll-feed
 
 paginate: 10
 paginate_path: "/:num"
-
-feed:
-  path: feed.atom
 ```
 
 Наконец, нам потребуется подставить ссылку Atom в заголовок наших страниц. Добавим мета-тег {% raw %}`{% feed_meta %}`{% endraw %} в заголовок
@@ -614,5 +620,33 @@ feed:
 После компиляции сайта в коде страницы мы увидим ссылку на документ Atom:
 
 ```html
-<link type="application/atom+xml" rel="alternate" href="http://prog.msk.ru/feed.atom" title="progmsk.github.io" />
+<link type="application/atom+xml" rel="alternate" href="http://prog.msk.ru/feed.xml" title="Московский клуб программистов" />
+```
+
+Наконец, вот и сам документ:
+```xml
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru-RU">
+  <generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator>
+  <link href="http://prog.msk.ru/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="http://prog.msk.ru/" rel="alternate" type="text/html" hreflang="ru-RU"/>
+  <updated>2018-04-03T15:39:58+00:00</updated>
+  <id>http://prog.msk.ru/</id>
+  <title type="html">progmsk.github.io</title>
+  <subtitle>Сайт московского клуба программистов</subtitle>
+  <entry>
+    <title type="html">Тестовая запись</title>
+    <link href="http://prog.msk.ru/2018/04/02/first-post/" rel="alternate" type="text/html" title="Тестовая запись"/>
+    <published>2018-04-02T00:00:00+00:00</published>
+    <updated>2018-04-02T00:00:00+00:00</updated>
+    <id>http://prog.msk.ru/2018/04/02/first-post</id>
+    <content type="html" xml:base="http://prog.msk.ru/2018/04/02/first-post/">
+      <p>Проверка работы GitHub Pages.</p> <!--more--> <p>Создали тестовую запись.</p>
+    </content>
+    <author>
+      <name/>
+    </author>
+    <summary type="html">Проверка работы GitHub Pages.</summary>
+  </entry>
+</feed>
 ```
