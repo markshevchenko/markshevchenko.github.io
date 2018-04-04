@@ -722,6 +722,12 @@ paginate_path: "blog/:num"
 Разместим на главной странице **index.html** вот этот код:
 
 ```html
+---
+layout: article
+title: Московский клуб программистов
+excerpt: Тяжела и неказиста жизнь простого программиста
+---
+
 <p>Как выяснилось, в Москве есть большая потребность в неформальных встречах программистов,
 без привязки к конкретным технологиям и языкам.</p>
 
@@ -732,6 +738,7 @@ paginate_path: "blog/:num"
 
 <div id="posts">
 </div>
+
 <script>
   window.onload = function() {
     var request = new XMLHttpRequest();
@@ -740,30 +747,37 @@ paginate_path: "blog/:num"
       if (data.target.status >= 200 && data.target.status < 300) {
         var feed = data.target.responseXML;
         var entries = feed.getElementsByTagName('entry');
-        showPosts(entries);
+        makeHtml(entries);
       }
     };
 
     request.send();
 
-    function showPosts(entries) {
+    function makeHtml(entries) {
       for (var i = 0; i < entries.length; i++) {
         var entry = parseEntry(entries[i]);
 
-        var header = document.createElement('h2');
-        header.innerHTML = `<a href='${entry.href}'>${entry.title}</a>`;
-        document.getElementById('posts').appendChild(header);
+        var titleLink = document.createElement('a');
+        titleLink.setAttribute('href', entry.href);
+        titleLink.appendChild(document.createTextNode(entry.title));
+            
+        var title = document.createElement('h2');
+        title.appendChild(titleLink);
 
-        var date = document.createElement('p', { class: 'date' });
-        date.innerText = entry.published.toLocaleString();
-        document.getElementById('posts').appendChild(date);
+        var date = document.createElement('p');
+        date.setAttribute('class', 'date');
+        date.appendChild(document.createTextNode(entry.published.toLocaleString()));
 
-        var author = document.createElement('p', { class: 'author' });
-        author.innerText = entry.author;
-        document.getElementById('posts').appendChild(author);
+        var author = document.createElement('p');
+        author.setAttribute('class', 'author');
+        author.appendChild(document.createTextNode(entry.author));
 
         var summary = document.createElement('p');
-        summary.innerText = entry.summary;
+        summary.appendChild(document.createTextNode(entry.summary));
+
+        document.getElementById('posts').appendChild(title);
+        document.getElementById('posts').appendChild(date);
+        document.getElementById('posts').appendChild(author);
         document.getElementById('posts').appendChild(summary);
       }
     }
