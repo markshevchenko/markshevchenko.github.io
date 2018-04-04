@@ -1,6 +1,6 @@
 ﻿---
 title: Сайт на GitHub Pages
-excerpt: Инструкция для начинающих
+description: GitHub Pages, инструкция для начинающих.
 id: github-pages
 ---
 
