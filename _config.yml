@@ -14,9 +14,6 @@ highlighter: rouge
 paginate: 10
 paginate_path: "/posts/:num"
 
-feed:
-  path: feed.atom
-
 exclude:
 - Gemfile
 - README.md
