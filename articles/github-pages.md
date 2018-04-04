@@ -623,9 +623,10 @@ paginate_path: "/:num"
 <link type="application/atom+xml" rel="alternate" href="http://prog.msk.ru/feed.xml" title="Московский клуб программистов" />
 ```
 
+Мета-тег {% raw %}`{% feed_meta %}`{% endraw %} как раз её и создаёт.
+
 Наконец, вот и сам документ:
 ```xml
-This XML file does not appear to have any style information associated with it. The document tree is shown below.
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru-RU">
   <generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator>
   <link href="http://prog.msk.ru/feed.xml" rel="self" type="application/atom+xml"/>
@@ -650,3 +651,70 @@ This XML file does not appear to have any style information associated with it. 
   </entry>
 </feed>
 ```
+
+## Страницы
+
+Если наш сайт будет не только блогом (а он не будет), удобно на главной странице разместить общую информацию, а для блога выделить
+отдельную страницу.
+
+Создадим в корне репозитория файл **blog/index.html** и перенесём туда код генерации списка записей:
+
+{% raw %}
+```liquid
+---
+layout: article
+title: Блог клуба программистов
+---
+<p>
+  <a href="/">На главную</a>
+</p>
+{% for post in paginator.posts %}
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  {{ post.excerpt }}
+{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+<ul>
+  {% if paginator.previous_page %}
+    <li><a href="{{ paginator.previous_page_path }}">Назад</a></li>
+  {% else %}
+    <li>Назад</li>
+  {% endif %}
+    <li>Страница {{ paginator.page }} из {{ paginator.total_pages }}</li>
+  {% if paginator.next_page %}
+    <li><a href="{{ paginator.next_page_path }}">Вперёд</a></li>
+  {% else %}
+    <li class="next">Вперёд</li>
+  {% endif %}
+</ul>
+{% endif %}
+```
+{% endraw %}
+
+Переименуем **index.html** в корне обратно в **index.md** и поставим ссылку на блог:
+
+```markdown
+---
+layout: article
+title: Московский клуб программистов
+excerpt: Тяжела и неказиста жизнь простого программиста
+---
+
+Как выяснилось, в Москве есть большая потребность в неформальных встречах программистов,
+без привязки к конкретным технологиям и языкам.
+
+Ниша «посидеть и поговорить» оказалась незаполненной.
+Этот пробел требует немедленной ликвидации, которой мы и занимаемся.
+
+[Блог клуба программистов](blog).
+
+```
+
+Чтобы ссылки на страницы блога привести к общему виду, в файле **\_config.yml** изменим параметр `paginate_path`:
+
+```yaml
+paginate_path: "blog/:num"
+```
+
+## Динамическое содержимое
+
