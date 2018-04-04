@@ -716,3 +716,69 @@ paginate_path: "blog/:num"
 
 ## Динамическое содержимое
 
+Поскольку наш сайт статический, кажется, что мы не можем показывать динамическое содержимое, например, ленту другого блога. Но мы&nbsp;&mdash;
+можем, с помощью JavaScript.
+
+Разместим на главной странице **index.html** вот этот код:
+
+```html
+<p>Как выяснилось, в Москве есть большая потребность в неформальных встречах программистов,
+без привязки к конкретным технологиям и языкам.</p>
+
+<p>Ниша «посидеть и поговорить» оказалась незаполненной.
+Этот пробел требует немедленной ликвидации, которой мы и занимаемся.</p>
+
+<p><a href="/blog/">Блог клуба программистов</a>.</p>
+
+<div id="posts">
+</div>
+<script>
+  window.onload = function() {
+    var request = new XMLHttpRequest();
+    request.open('GET', 'http://markshevchenko.pro/feed.xml', true);
+    request.onload = function(data) {
+      if (data.target.status >= 200 && data.target.status < 300) {
+        var feed = data.target.responseXML;
+        var entries = feed.getElementsByTagName('entry');
+        showPosts(entries);
+      }
+    };
+
+    request.send();
+
+    function showPosts(entries) {
+      for (var i = 0; i < entries.length; i++) {
+        var entry = parseEntry(entries[i]);
+
+        var header = document.createElement('h2');
+        header.innerHTML = `<a href='${entry.href}'>${entry.title}</a>`;
+        document.getElementById('posts').appendChild(header);
+
+        var date = document.createElement('p', { class: 'date' });
+        date.innerText = entry.published.toLocaleString();
+        document.getElementById('posts').appendChild(date);
+
+        var author = document.createElement('p', { class: 'author' });
+        author.innerText = entry.author;
+        document.getElementById('posts').appendChild(author);
+
+        var summary = document.createElement('p');
+        summary.innerText = entry.summary;
+        document.getElementById('posts').appendChild(summary);
+      }
+    }
+
+    function parseEntry(entry) {
+      return {
+        title: entry.getElementsByTagName('link')[0].getAttribute('title'),
+        href: entry.getElementsByTagName('link')[0].getAttribute('href'),
+        published: new Date(entry.getElementsByTagName('published')[0].innerHTML),
+        author: entry.getElementsByTagName('name')[0].innerHTML,
+        summary: entry.getElementsByTagName('summary')[0].innerHTML
+      };
+    }
+  }
+</script>
+```
+
+Этот простейший скрипт на ванильном JavaScript читает и разбирает ленту одного блога, и затем вставляет её на стринцу.
