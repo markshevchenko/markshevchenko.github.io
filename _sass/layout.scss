@@ -13,7 +13,7 @@ header {
   padding: $spacing-unit/2 0;
 }
 
-article {
+main {
   padding: $spacing-unit/2 $spacing-unit;
 }
 
@@ -160,12 +160,12 @@ blockquote {
   font-style: italic;
 }
 
-article > dl > dt {
+main > dl > dt {
   font-weight: bold;
 }
 
-article > p,
-article > dl > dd {
+main > p,
+main > dl > dd {
   text-align: justify;
   margin-bottom: 1em;
 }
@@ -333,7 +333,7 @@ table {
     -ms-grid-row: 5;
   }
 
-  article {
+  main {
     grid-column: 2;
     grid-row: 1 / span 7;
 
