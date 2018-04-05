@@ -716,10 +716,165 @@ paginate_path: "blog/:num"
 
 ## Динамическое содержимое
 
-Поскольку наш сайт статический, кажется, что мы не можем показывать динамическое содержимое, например, ленту другого блога. Но мы&nbsp;&mdash;
-можем, с помощью JavaScript.
+Поскольку наш сайт статический, кажется, что мы не можем показывать динамическое содержимое. Но мы можем&nbsp;&mdash; с помощью JavaScript.
 
-Разместим на главной странице **index.html** вот этот код:
+Скажем, на сайте клуба удобно собирать (синдицировать) новостые ленты участников. Для простоты решим эту задачу на ванильном JavaScript, то есть
+на &laquo;чистом&raquo;, без привлечения [jQuery](https://jquery.com/) и других библиотек.
+
+Мы хотим, чтобы наша программа загружала ленту в формате Atom и выводила их прямо на страницу.
+Читатель сайта ожидает увидеть заголовки записей, оформленные в виде ссылок, дату публикации, автора и анонс.
+
+Первое, что нам нужно: добавить в **index.html** блок, где будут размещаться анонсы:
+
+```html
+<div id="posts">
+</div>
+```
+
+Далее разместим первые строки нашей программы:
+
+```html
+<div id="posts">
+</div>
+
+<script>
+  window.addEventListener('load', function() {
+  });
+</script>
+```
+
+Метод `addEventListener` поддерживается IE, начиная с 9-й версии, но к счастью, сама [9-я версия уже давно почила в бозе](https://www.microsoft.com/ru-ru/windowsforbusiness/end-of-ie-support) и мы этот метод можем вызывать без опаски. Событие `'load'` возникнет после загрузки страницы. Наряду со всеми
+обработчиками, которые будут зарегистрированы через `addEventListener`, браузер вызовет и нашу функцию.
+
+Итак, мы должны загрузить новостную ленту в формате Atom. JavaScript предоставляет для этих целей объект `XMLHttpRequest`:
+
+```javascript
+window.addEventListener('load', function() {
+  var request = new XMLHttpRequest();
+  request.open('GET', 'http://markshevchenko.pro/feed.xml', true);
+
+  request.onload = function(data) {
+    if (data.target.status >= 200 && data.target.status < 300) {
+      var feed = data.target.responseXML;
+      var entries = feed.getElementsByTagName('entry');
+
+      for (var i = 0; i < entries.length; i++) {
+        var post = parsePost(entries[i]);
+        appendPost(post);
+      }
+    }
+  };
+
+  request.send();
+});
+```
+
+Загрузка данных осуществляется асинхронно. Мы вызываем метод `send`, который инициирует запрос к серверу и немедленно возвращает управление.
+Получив с сервера ответ, объект `request` вызовет наш обработчик, передав ему в качестве параметра результаты запроса. В поле `data.target.status`
+мы увидим статус HTTP, который, если всё нормально, будет в диапазоне 200..299. В поле `data.target.responseXML` мы получим разобранный браузером
+XML в виде объекта `Document`.
+
+Метод `Document.getElementsByTagName('entry')` извлечёт из документа все элементы с тегом `'entry'` и вернёт их в виде коллекции. Напомню, как
+выглядит типичная запись в формате Atom:
+
+```xml
+<entry>
+  <title type="html">Тестовая запись</title>
+  <link href="http://prog.msk.ru/2018/04/02/first-post/" rel="alternate" type="text/html" title="Тестовая запись"/>
+  <published>2018-04-02T00:00:00+00:00</published>
+  <updated>2018-04-02T00:00:00+00:00</updated>
+  <id>http://prog.msk.ru/2018/04/02/first-post</id>
+  <content type="html" xml:base="http://prog.msk.ru/2018/04/02/first-post/">
+    <p>Проверка работы GitHub Pages.</p> <!--more--> <p>Создали тестовую запись.</p>
+  </content>
+  <author>
+    <name>Mark Shevchenko</name>
+  </author>
+  <summary type="html">Проверка работы GitHub Pages.</summary>
+</entry>
+```
+
+Для каждой записи мы будем формировать HTML вида:
+
+```html
+<h2><a href='{link[href]}'>{link[title]}</a></h2>
+<p class='date'>{published}</p>
+<p class='author'>{author/name}</p>
+<p>{summary}</p>
+```
+
+В фигурных скобках указано, откуда брать значения. Мы вынесем код, который будет разбирать **entry** в метод `parsePost`, а код
+формирования HTML&nbsp;&mdash; в `appendPost`.
+
+```javascript
+function parsePost(entry) {
+  return {
+    title: getAttribute(entry, 'link', 'title'),
+    href: getAttribute(entry, 'link', 'href'),
+    published: getTextContent(entry, 'published'),
+    author: getTextContent(entry, 'author > name'),
+    summary: getTextContent(entry, 'summary')
+  };
+}
+
+function getAttribute(entry, selector, attributeName) {
+  var element = entry.querySelector(selector);
+
+  return (element == null) ? null : element.getAttribute(attributeName);
+}
+
+function getTextContent(entry, selector) {
+  var element = entry.querySelector(selector);
+
+  return (element == null) ? null : element.textContent;
+}
+```
+
+Первый метод извлекает значения атрибутов и текстовое содержимое из дочерних элементов **entry** и складывает их в объект.
+Нет гарантий, что запись будет содержать все нужные данные. Чтобы избежать ошибок, мы проверяем, что результат вызова `querySelect`
+не `null`, прежде чем извлекать значение атрибута или текст.
+
+Метод `appendPost` тоже разобьём на части:
+
+```javascript
+function appendPost(post) {
+  appendHeaderLink(post.title, post.href);
+
+  appendParagraph(post.published, 'date');
+  appendParagraph(post.author, 'author');
+  appendParagraph(post.summary);
+}
+
+function appendHeaderLink(title, href) {
+  var a = document.createElement('a');
+  a.setAttribute('href', href);
+  a.appendChild(document.createTextNode(title));
+  
+  var h2 = document.createElement('h2');
+  h2.appendChild(a);
+
+  document.getElementById('posts').appendChild(h2);
+}
+
+function appendParagraph(text, className) {
+  if (text == null)
+    return;
+
+  var p = document.createElement('p');
+  p.setAttribute('class', className);
+  p.appendChild(document.createTextNode(text));
+
+  document.getElementById('posts').appendChild(p);
+}
+```
+
+Каждый участок HTML строится по частям. Чтобы сформировать `<h2><a href={href}>{title}</a></h2>` мы сначала создаём элемент `a`,
+устанавливаем у него атрибут `href` и записываем внутрь текст. Только потом готовый элемент `a` можно поместить в `h2`.
+
+Параграф мы добавляем только в случае, если есть, что разместить внутри. Параметр `className`, если задан, определяет значение атрибута
+`class` у нового параграфа.
+
+Целиком **index.html** в корне репозитория должен выглядеть так:
 
 ```html
 ---
@@ -740,59 +895,75 @@ excerpt: Тяжела и неказиста жизнь простого прог
 </div>
 
 <script>
-  window.onload = function() {
+  window.addEventListener('load', function() {
     var request = new XMLHttpRequest();
     request.open('GET', 'http://markshevchenko.pro/feed.xml', true);
     request.onload = function(data) {
       if (data.target.status >= 200 && data.target.status < 300) {
         var feed = data.target.responseXML;
-        var entries = feed.getElementsByTagName('entry');
-        makeHtml(entries);
+        var entries = feed.querySelectorAll('entry');
+        for (var i = 0; i < entries.length; i++) {
+          var post = parsePost(entries[i]);
+          appendPost(post);
+        }
       }
     };
 
     request.send();
 
-    function makeHtml(entries) {
-      for (var i = 0; i < entries.length; i++) {
-        var entry = parseEntry(entries[i]);
-
-        var titleLink = document.createElement('a');
-        titleLink.setAttribute('href', entry.href);
-        titleLink.appendChild(document.createTextNode(entry.title));
-            
-        var title = document.createElement('h2');
-        title.appendChild(titleLink);
-
-        var date = document.createElement('p');
-        date.setAttribute('class', 'date');
-        date.appendChild(document.createTextNode(entry.published.toLocaleString()));
-
-        var author = document.createElement('p');
-        author.setAttribute('class', 'author');
-        author.appendChild(document.createTextNode(entry.author));
-
-        var summary = document.createElement('p');
-        summary.appendChild(document.createTextNode(entry.summary));
-
-        document.getElementById('posts').appendChild(title);
-        document.getElementById('posts').appendChild(date);
-        document.getElementById('posts').appendChild(author);
-        document.getElementById('posts').appendChild(summary);
-      }
-    }
-
-    function parseEntry(entry) {
+    function parsePost(entry) {
       return {
-        title: entry.getElementsByTagName('link')[0].getAttribute('title'),
-        href: entry.getElementsByTagName('link')[0].getAttribute('href'),
-        published: new Date(entry.getElementsByTagName('published')[0].innerHTML),
-        author: entry.getElementsByTagName('name')[0].innerHTML,
-        summary: entry.getElementsByTagName('summary')[0].innerHTML
+        title: getAttribute(entry, 'link', 'title'),
+        href: getAttribute(entry, 'link', 'href'),
+        published: getTextContent(entry, 'published'),
+        author: getTextContent(entry, 'author > name'),
+        summary: getTextContent(entry, 'summary')
       };
     }
-  }
+
+    function getAttribute(entry, selector, attributeName) {
+      var element = entry.querySelector(selector);
+
+      return (element == null) ? null : element.getAttribute(attributeName);
+    }
+
+    function getTextContent(entry, selector) {
+      var element = entry.querySelector(selector);
+
+      return (element == null) ? null : element.textContent;
+    }
+
+    function appendPost(post) {
+      appendHeaderLink(post.title, post.href);
+      
+      appendParagraph(post.published, 'date');
+      appendParagraph(post.author, 'author');
+      appendParagraph(post.summary);
+    }
+
+    function appendHeaderLink(title, href) {
+      var a = document.createElement('a');
+      a.setAttribute('href', href);
+      a.appendChild(document.createTextNode(title));
+      
+      var h2 = document.createElement('h2');
+      h2.appendChild(a);
+
+      document.getElementById('posts').appendChild(h2);
+    }
+
+    function appendParagraph(text, className) {
+      if (text == null)
+        return;
+
+      var p = document.createElement('p');
+      p.setAttribute('class', className);
+      p.appendChild(document.createTextNode(text));
+
+      document.getElementById('posts').appendChild(p);
+    }
+  });
 </script>
 ```
 
-Этот простейший скрипт на ванильном JavaScript читает и разбирает ленту одного блога, и затем вставляет её на стринцу.
+Похожим способом мы можем динамически формировать содержимое страницы даже на статическом сайте, созданным с помощью Jekyll.
