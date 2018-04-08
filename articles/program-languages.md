@@ -341,7 +341,7 @@ end program fibonacci
 
 Данные и программы записываются одинаково, в виде S-выражений, знаменитой скобочной записи:
 
-```scheme
+```common-lisp
 (cons 1 '(2 3 4))
 ```
 
@@ -354,7 +354,7 @@ end program fibonacci
 
 Напечатаем первые двадцать чисел Фибоначчи на Scheme, современном наследнике языка ЛИСП:
 
-```scheme
+```common-lisp
 (define (fibonacci-series n)
  (define (build-fibonacci m a b l)
   (cond
