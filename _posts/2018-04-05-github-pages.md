@@ -1,5 +1,6 @@
 ﻿---
 title: Сайт на GitHub Pages
+date: 2018-04-05 10:00:00 +0300
 id: github-pages
 ---
 
