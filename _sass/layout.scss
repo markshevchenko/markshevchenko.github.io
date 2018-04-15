@@ -170,6 +170,8 @@ main > dl > dd {
   margin-bottom: 1em;
 }
 
+
+
 #relations {
   display: table;
   table-layout: fixed;
@@ -211,6 +213,7 @@ pre.highlight {
 
   padding: $spacing-unit/2;
   border: 1pt dotted $grey-color-dark;
+  margin-bottom: 1em;
 
   overflow-x: scroll;
   overflow-y: hidden;
