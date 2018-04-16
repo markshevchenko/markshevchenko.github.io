@@ -27,3 +27,6 @@ layout: main
 <footer>
   &copy; Писал и много раз переписывал Марк Шевченко, 1992&ndash;2018.
 </footer>
+{% if jekyll.environment == 'production' %}
+{% include google-analytics.html %}
+{% endif %}
