@@ -1,0 +1,22 @@
+﻿<!doctype html>
+<html lang="{{ page.lang | default: site.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}">
+    <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "/img/favicon-16x16.png" | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "/img/favicon-32x32.png" | relative_url }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ "/img/favicon-96x96.png" | relative_url }}">
+    {% feed_meta %}
+  </head>
+  <body>
+    {{ content }}
+    {% if jekyll.environment == 'production' %}
+    {% include google-analytics.html %}
+    {% endif %}
+  </body>
+</html>
