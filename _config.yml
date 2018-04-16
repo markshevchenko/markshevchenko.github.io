@@ -34,14 +34,14 @@ defaults:
   -
     scope:
       path: "articles"
-      type: "page"
+      type: "pages"
     values:
       layout: "article"
       comments: "true"
   - 
     scope:
       path: "posts"
-      type: "post"
+      type: "posts"
     values:
       layout: "post"
       comments: "true"
@@ -49,6 +49,6 @@ defaults:
   -
     scope:
       path: "presentations"
-      type: "presentation"
+      type: "pages"
     values:
       layout: "presentation"
