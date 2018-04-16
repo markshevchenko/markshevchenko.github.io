@@ -10,3 +10,6 @@ layout: page
 {{ content }}
 
 {% include disqus.html %}
+{% if jekyll.environment == 'production' %}
+{% include google-analytics.html %}
+{% endif %}
