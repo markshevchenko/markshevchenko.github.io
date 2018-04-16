@@ -8,7 +8,7 @@ title: Блог
 {% for post in paginator.posts %}
   <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
   <p class="date">{{ post.date | date: "%d-%m-%Y" }}</p>
-  {{ post.excerpt }}
+  <p>{{ post.excerpt | strip_html | normalize_whitespace | escape }}</p>
 {% endfor %}
 
 <div id="relations">
