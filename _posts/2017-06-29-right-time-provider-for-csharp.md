@@ -1,7 +1,6 @@
 ---
-layout: post
 title: Правильный поставщик времени для C#
-date: 2017-06-29 17:15:00 +0300
+date: "2017-06-29 17:15:00 +0300"
 excerpt: Как протестировать, что метод корректно вызывает DateTime.Now, ведь мы не знаем, какое значение будет установлено? Простое решение для C#.
 image: https://github.com/jekyll/brand/blob/master/jekyll-notext-light-solid.png?raw=true
 ---
