@@ -10,5 +10,3 @@ excerpt: Доклад, прочитанный на заседании Моско
 Исходный код на markdown, смотреть можно в любом браузере.
 
 На радостях переформатировал [доклад прошлого года про командообразование](/presentations/team-building).
-
-[Презентация в формате PDF](http://markshevchenko.pro/download/startups-myths-and-reality.pdf).
