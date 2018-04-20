@@ -44,8 +44,8 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      image: /img/markshevchenko.jpg
       comments: "true"
+      image: /img/markshevchenko.jpg
   -
     scope:
       path: "presentations"
