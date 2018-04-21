@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Стартапы: мифы и реальность"
 date: "2018-04-16 10:00:00 +0300"
 id: startups-myths-and-reality
