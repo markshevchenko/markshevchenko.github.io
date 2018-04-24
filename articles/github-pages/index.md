@@ -1,6 +1,6 @@
 ﻿---
 title: Сайт на GitHub Pages
-excerpt: GitHub Pages, инструкция для начинающих.
+excerpt: GitHub Pages, создаём сайт без дизайна.
 id: github-pages
 ---
 
