@@ -12,9 +12,11 @@ excerpt: Пакет для отправки REST запросов.
 
 При разработке REST-клиента нужно отсылать на сервере запросы. Выглядят они приблизительно так:
 
-**POST** `http://api.domain.tld/v1/resources` \\
-**GET** `http://api.domain.tld/v1/resources?from=2018-04-17T11:37:00&ends_with=bar` \\
-**PUT** `http://api.domain.tld/v1/resources/2`
+```
+POST http://api.domain.tld/v1/resources
+GET http://api.domain.tld/v1/resources?from=2018-04-17T11:37:00&ends_with=bar
+PUT http://api.domain.tld/v1/resources/2
+```
 
 В теле запроса могут присутствовать дополнительные параметры, которые чаще всего закодированы в формате JSON.
 Иногда запросы возвращают результаты, также в формате JSON.
@@ -52,7 +54,9 @@ URI, общую для всех методов.
 
 Параметры запроса можно передавать либо в пути (до знака вопроса `?`), либо в строке запроса (после знака вопроса `?`):
 
-**GET** `http://api.domain.tld/v1/resources/314/subresources?from=2018-04-17T11:37:00&ends-with=bar`
+```
+GET http://api.domain.tld/v1/resources/314/subresources?from=2018-04-17T11:37:00&ends-with=bar
+```
 
 В примере `314`&nbsp;&mdash; это параметр, переданный в пути `/v1/resources/314/subresources`, а `2018-04-17T11:37:00`
 и `bar`&nbsp;&mdash; параметры, переданные в строке запроса. В отличие от `314`, каждый из них имеет имя,
