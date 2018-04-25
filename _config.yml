@@ -25,7 +25,6 @@ kramdown:
 gems:
   - jekyll-paginate
   - jekyll-feed
-  - jekyll-seo-tag
   
 sass:
   sass_dir: _sass
