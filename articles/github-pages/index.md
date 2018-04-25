@@ -4,7 +4,7 @@ excerpt: GitHub Pages, создаём сайт без дизайна.
 id: github-pages
 ---
 
-## Что это
+## Что такое GitHub Pages
 
 [GitHub Pages](https://pages.github.com/)&nbsp;&mdash; служба хостинга сайтов, которая позволяет вести персональные сайты, сайты организаций и сайты
 отдельных проектов GitHub.
