@@ -4,7 +4,7 @@ excerpt: Изучаем GitHub Pages и Bootstrap 4.
 id: github-pages
 ---
 
-Цикл статей, который научит, как создавать сайты проектов на GitHub.
+Цикл статей, который научит, как создавать сайты на GitHub Pages.
 
 [Быстрый старт&nbsp;&mdash; Jekyll](jekyll)
 
