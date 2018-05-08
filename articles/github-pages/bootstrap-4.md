@@ -222,7 +222,8 @@ id: bootstrap-4
 
 Вопреки ожиданиям, делается это несложно.
 
-```html
+{% raw %}
+```liquid
 <nav class="col-12 col-lg-3">
   <ul class="nav nav-fill flex-column">
     <li class="nav-item">
@@ -236,7 +237,8 @@ id: bootstrap-4
 <main class="col-12 col-lg-9">
   {{ content }}
 </main>
-```
+```	
+{% endraw %}
 
 Мы добавили класс `col-lg-3` к панели навигации и класс `col-lg-9` к содержимому. По [соглашению Bootstrap](https://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints), если мы используем
 модификатор размера, например, `lg`, то на всех экранах больше **large** будет применяться новая ширина.
