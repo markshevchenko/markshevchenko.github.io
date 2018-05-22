@@ -80,13 +80,13 @@ var resource = await jsonRestClient.GetAsync<Resource>($"resources/{resourceId}"
 
 ## Статус 404
 
-Для методов `Get` в `JsonRestClient` предусмотрена форма `GetOrDefault`. Если запрос возвращает статус 404, метод `GetOrDefault`
+Для методов `Get` в `JsonRestClient` предусмотрена форма `GetOrDefaultAsync`. Если запрос возвращает статус 404, метод `GetOrDefaultAsync`
 возвратит значение по умолчанию для заданного типа.
 
 ## С глаз долой&nbsp;&mdash; из сердца вон
 
-Для методов `Put` и `Post` в `JsonRestClient` предусмотрена форма `PutAndForget`. Обычные методы `Put`/`Post` выбрасывают исключение, если
-статус ответа отличается от 2xx. Методы `AndForget` не проверяют статус ответа совсем.
+Для методов `Put` и `Post` в `JsonRestClient` предусмотрена форма `PutAndForgetAsync`. Обычные методы `Put`/`Post` выбрасывают исключение, если
+статус ответа отличается от 2xx. &laquo;Забывчивые&raquo; методы не проверяют статус ответа совсем.
 
 [nuget.org](https://www.nuget.org/packages/Binateq.JsonRestClient/)
 
