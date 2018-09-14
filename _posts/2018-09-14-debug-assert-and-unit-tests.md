@@ -1,5 +1,5 @@
 ---
-title: `Debug.Assert` и модульные тесты
+title: Debug.Assert и модульные тесты
 date: "2018-09-14 18:00:00 +0300"
 id: debug-assert-and-unit-tests
 excerpt: Одна тонкая деталь Debug.Assert, про которую я, оказывается, не знал.
