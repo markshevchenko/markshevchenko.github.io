@@ -54,8 +54,8 @@ public void ReadIntPairs_WithSingleNumberInsteadOfPair_ThrowsException()
 
 > The active test run was aborted. Reason: Assertion Failed.
 
-Похожее сообщение об ошибке вы увидите, если используете **xUnit** вместо **MSTest**. Похоже, что дело в `Debug.Assert`, но почему? Разве модуль не должен
-просто перехватить и обработать исключение?
+Похожее сообщение об ошибке вы увидите, если используете **xUnit** вместо **MSTest**. Кажется, что дело в `Debug.Assert`, но почему? Разве модуль
+запуска тестов не должен просто перехватить и обработать исключение?
 
 Оказывается, нет.
 
