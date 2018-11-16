@@ -24,13 +24,15 @@ title: Статьи
 </div>
 
 <div class="notice">
-[Сленг и фольклор программистов КАМАЗА](slang)
+#### [Сленг и фольклор программистов КАМАЗА](slang)
 
 Канул в лету вместе с IBM PC XT.
 </div>
 
 <div class="notice">
-[Принципы дельного общения](efficient-communication-principles)
+#### [Принципы дельного общения](efficient-communication-principles)
 
 Не о программировании. Разместил из-за ностальгии, какой я был умный двадцать лет назад.
 </div>
+
+{::options parse_block_html="true" /}
