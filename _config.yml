@@ -14,8 +14,8 @@ paginate: 10
 paginate_path: "/posts/:num"
 
 exclude:
-- Gemfile
-- README.md
+  - Gemfile
+  - README.md
 
 markdown: kramdown
 
