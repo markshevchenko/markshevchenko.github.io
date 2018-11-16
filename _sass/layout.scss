@@ -170,7 +170,17 @@ main > dl > dd {
   margin-bottom: 1em;
 }
 
+.notice {
+  margin-bottom: 1em;
+}
 
+.notice > p {
+  font-style: italic;
+}
+
+.notice > p.date {
+  font-style: normal;
+}
 
 #relations {
   display: table;
