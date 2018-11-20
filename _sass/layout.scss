@@ -253,6 +253,10 @@ table {
   white-space: pre;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 @media screen and (max-width: 480px) {
   body {
     font-size: 10pt;
