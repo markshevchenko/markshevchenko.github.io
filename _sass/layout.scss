@@ -257,6 +257,14 @@ table {
   white-space: nowrap;
 }
 
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
 @media screen and (max-width: 480px) {
   body {
     font-size: 10pt;
