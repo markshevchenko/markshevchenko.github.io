@@ -3,3 +3,12 @@
 
 @import "default";
 @import "base";
+
+.half-width > img {
+    width: 100%;
+    height: auto;
+}
+
+.center {
+    text-align: center;
+}
