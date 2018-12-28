@@ -3,3 +3,23 @@
 
 @import "default";
 @import "base";
+
+.float-left {
+    float: left;
+  
+    img {
+      width: 33.3%;
+      height: auto;
+    }
+}
+  
+.float-right {
+    float: right;
+  
+    img {
+      width: 33.3%;
+      height: auto;
+    }
+}
+  
+  
