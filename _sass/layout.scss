@@ -257,24 +257,6 @@ table {
   white-space: nowrap;
 }
 
-.float-left {
-  float: left;
-
-  img {
-    width: 33.3%;
-    height: auto;
-  }
-}
-
-.float-right {
-  float: right;
-
-  img {
-    width: 33.3%;
-    height: auto;
-  }
-}
-
 @media screen and (max-width: 480px) {
   body {
     font-size: 10pt;
