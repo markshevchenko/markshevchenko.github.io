@@ -1,8 +1,8 @@
 ---
-title: Хранение сертификата HttpClient в Azure Key Vault
+title: Сертификат HttpClient в Azure Key Vault
 date: "2019-01-29 12:00:00 +0300"
 id: storing-http-client-certificate-in-azure-key-vault
-excerpt: Неделя потрачена на то, чтобы победить хранение сертификатов HttpClient в Azure Key Vault. Краткое резюме битвы. 
+excerpt: Неделя потрачена на то, чтобы победить хранение сертификатов HttpClient в Azure Key Vault. Краткое резюме битвы.
 ---
 
 ## О чём речь
