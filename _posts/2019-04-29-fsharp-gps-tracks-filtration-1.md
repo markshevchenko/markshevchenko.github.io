@@ -1,5 +1,5 @@
 ---
-title: Фильтрация треков GPS на языке программирования F#, Часть I
+title: Фильтрация треков GPS на F#, Часть I
 date: "2019-04-29 12:00:00 +0300"
 id: fsharp-gps-tracks-filtration-1
 excerpt: Лекция, прочитанная в Московском клубе программистов 21 февраля 2019 года.
@@ -29,7 +29,7 @@ excerpt: Лекция, прочитанная в Московском клубе
 Опишем *объект-значение* `SensorItem`, в котором будем хранить перечисленные параметры точки:
 
 **Types.fs**
-```f#
+```ocaml
 module Types
 
 open System
@@ -73,10 +73,10 @@ type SensorItem(latitude: float, longitude: float, speed: float, heading: float,
 
 В первом случае интервал времени между соседними точками отрицателен, во втором&nbsp;&mdash; равен нулю. В обоих случаях нам надо удалить координаты с отрицательными или нулевыми интервалами.
 
-Для начала давайте напишем *заготовку* функции, которая будет отбрасывать показания с временной меткой из прошлого.
+Для начала напишем *заготовку* функции, которая будет отбрасывать показания с временной меткой из прошлого.
 
 **Filters.fs**
-```f#
+```ocaml
 module Filters
 
 open System
@@ -97,7 +97,7 @@ let removeZeroOrNegativeTimespans points =
 Для начала убедимся, что функция, получая пустой список, также возвращает пустой список.
 
 **FilterTests.fs**
-```f#
+```ocaml
 open System
 open Xunit
 open Types
@@ -119,7 +119,7 @@ let ``removeZeroOrNegativeTimespans - with empty points - returns empty list`` (
 
 Подобным образом напишем функцию, которая вернёт список из одного элемента, получив такой же список в параметре.
 
-```f#
+```ocaml
 [<Fact>]
 let ``removeZeroOrNegativeTimespans - with single point - returns single point`` () =
     let source = [SensorItem(0.0, 0.0, 0.0, 0.0, DateTimeOffset.Parse("2018-12-07T16:38:00+03:00"))]
@@ -134,7 +134,7 @@ let ``removeZeroOrNegativeTimespans - with single point - returns single point``
 
 Первые два теста должны запускаться без ошибок, не смотря на то, что код нашей функции ничего не делает. Теперь напишем тест, который &laquo;сломает&raquo; наивную реализацию. Передадим в качестве параметра список из трёх элементов, в котором дата и время второго элемента будут совпадать с датой и временем первого.
 
-```f#
+```ocaml
 [<Fact>]
 let ``removeZeroOrNegativeTimespans - with zero timespan - removes point`` () =
     let source = [SensorItem(0.0, 0.0, 0.0, 0.0, DateTimeOffset.Parse("2018-12-07T16:38:15+03:00"));
@@ -152,7 +152,7 @@ let ``removeZeroOrNegativeTimespans - with zero timespan - removes point`` () =
 
 Этот тест у нас не пройдёт. Самое время написать корректную реализацию фильтра.
 
-```f#
+```ocaml
 let removeZeroOrNegativeTimespans points =
     match points with
     | [] -> []
@@ -195,7 +195,8 @@ let removeZeroOrNegativeTimespans points =
 Чтобы исправить ситуацию, я применил два способа. Один из них основан на специальной обработке рискованных дат, и не очень интересен. Второй касается нашей функции. Её необходимо переписать так, чтобы она отбрасывала *все* метки из прошлого.
 
 Для начала напишем тест для проверки новой ошибки.
-```f#
+
+```ocaml
 [<Fact>]
 let ``removeZeroOrNegativeTimespans - with two negative timespans - removes both points`` () =
     let source = [SensorItem(0.0, 0.0, 0.0, 0.0, DateTimeOffset.Parse("2018-12-07T16:38:15+03:00"));
@@ -212,7 +213,7 @@ let ``removeZeroOrNegativeTimespans - with two negative timespans - removes both
 
 Сама функция теперь выглядит так:
 
-```f#
+```ocaml
 let removeZeroOrNegativeTimespans points =
     let rec filter (p1: SensorItem) points =
         match points with
