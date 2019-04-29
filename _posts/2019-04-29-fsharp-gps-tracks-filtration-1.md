@@ -115,7 +115,7 @@ let ``removeZeroOrNegativeTimespans - with empty points - returns empty list`` (
 
 Двойные *обратные апострофы*, то есть символы \`\` позволяют использовать в названии функций произвольные символы, даже пробелы. Опираясь на рекомендацию Роя Оушерова (Искусство автономного тестирования, стр. 58&ndash;59) я назвал тестовый метод в соответствии с шаблоном *название метода*&nbsp;&mdash; *сценарий*&nbsp;&mdash; *ожидаемое поведение*. Название метода `removeZeroOrNegativeTimespans`, сценарий&nbsp;&mdash; with empty points, то есть &laquo;с пустыми списком точек&raquo;, а ожидаемое поведение&nbsp;&mdash; returns empty list, &laquo;возвращает пустой список&raquo;.
 
-Атрибут `[<Fact>]` подсказывает фреймворку **XUnit**, что функция с именем ```removeZeroOrNegativeTimespans - with empty points - returns empty list``` должна быть вызвана при запуске тестов. *Утверждение* `Assert.Empty` позволяет проверить, что список, возвращённый функцией `removeZeroOrNegativeTimespans`, пуст.
+Атрибут `[<Fact>]` подсказывает фреймворку **XUnit**, что функция с именем `` `removeZeroOrNegativeTimespans - with empty points - returns empty list` `` должна быть вызвана при запуске тестов. *Утверждение* `Assert.Empty` позволяет проверить, что список, возвращённый функцией `removeZeroOrNegativeTimespans`, пуст.
 
 Подобным образом напишем функцию, которая вернёт список из одного элемента, получив такой же список в параметре.
 
