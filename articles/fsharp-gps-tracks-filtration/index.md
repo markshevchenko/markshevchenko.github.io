@@ -30,4 +30,12 @@ excerpt: Фрагменты лекции, прочитанной в Москов
 
 Часть III: Фильтр Калмана
 
-ЧАсть IV: интеграция с C#, Azure и Xamarin
+Часть IV: интеграция с C#, Azure и Xamarin
+
+Ссылки
+
+1. [GPS Data Filtration Method for Drive Cycle Analysis Applications](https://pdfs.semanticscholar.org/3bc3/3f0902565a19a016762ab07ace62a7ca0261.pdf)
+
+1. [Фильтр Калмана](https://habr.com/ru/post/166693/)
+
+1. [Вычисление расстояния и начального азимута между двумя точками на сфере](http://gis-lab.info/qa/great-circles.html)
