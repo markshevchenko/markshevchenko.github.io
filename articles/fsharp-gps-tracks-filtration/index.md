@@ -39,3 +39,5 @@ excerpt: Фрагменты лекции, прочитанной в Москов
 1. [Фильтр Калмана](https://habr.com/ru/post/166693/)
 
 1. [Вычисление расстояния и начального азимута между двумя точками на сфере](http://gis-lab.info/qa/great-circles.html)
+
+1. [Тригонометрические формулы сложения](http://www.cleverstudents.ru/trigonometry/angle_addition_formulas.html)
