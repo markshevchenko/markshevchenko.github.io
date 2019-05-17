@@ -177,7 +177,7 @@
    id="tspan4923">i</tspan></tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:12px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;baseline-shift:baseline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="128.47423"
        y="270.85178"
        id="text4919-4"><tspan
@@ -186,10 +186,10 @@
          x="128.47423"
          y="270.85178"
          style="baseline-shift:baseline;stroke-width:0.26458332">x<tspan
-   style="font-size:7.79999971px;baseline-shift:super;stroke-width:0.26458332"
-   id="tspan4921-1">r</tspan><tspan
-   style="font-size:7.79999971px;baseline-shift:sub;stroke-width:0.26458332"
-   id="tspan4923-8">i+1</tspan></tspan></text>
+   style="font-size:65%;baseline-shift:super"
+   id="tspan5037">r</tspan><tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan5040">i+1</tspan></tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Lstart);marker-end:url(#marker4985)"
        d="M 60.937452,278.82567 H 132.09797"
