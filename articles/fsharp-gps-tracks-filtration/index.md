@@ -34,7 +34,6 @@ excerpt: Фрагменты лекции, прочитанной в Москов
 
 Ссылки
 
-1. [GPS Data Filtration Method for Drive Cycle Analysis Applications](https://pdfs.semanticscholar.org/3bc3/3f0902565a19a016762ab07ace62a7ca0261.pdf)
 
 1. [Фильтр Калмана](https://habr.com/ru/post/166693/)
 
