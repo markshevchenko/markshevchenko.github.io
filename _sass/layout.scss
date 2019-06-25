@@ -14,7 +14,7 @@ header {
 }
 
 main {
-  padding: $spacing-unit $spacing-unit;
+  padding: $spacing-unit (2 * $spacing-unit);
 }
 
 footer {
@@ -238,7 +238,7 @@ table {
   border-collapse: collapse;
 
   width: 100%;
-  margin: 0 0 8px 0;
+  margin: 0 0 (2 * $spacing-unit) 0;
 }
 
 .upbeat {
