@@ -14,7 +14,7 @@ header {
 }
 
 main {
-  padding: $spacing-unit $spacing-unit/2;
+  padding: $spacing-unit $spacing-unit;
 }
 
 footer {
@@ -388,7 +388,7 @@ table {
   }
 
   main {
-    padding: 80px ($spacing-unit * 2) $spacing-unit/2 0;
+    padding: 80px ($spacing-unit * 2) $spacing-unit $spacing-unit;
     grid-column: 2;
     grid-row: 1 / span 7;
 
