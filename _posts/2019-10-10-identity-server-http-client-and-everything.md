@@ -186,7 +186,7 @@ services.AddAuthentication("Bearer")
 
 Вот теперь консольное приложение показывает мне именно то, что я ожидаю.
 
-![Вывод программы Client из документации по IdentityServer4](/img/identity-server-client.png)
+![Вывод программы Client из документации по IdentityServer4](/img/identity-server-console.png)
 
 ### Заключение
 
