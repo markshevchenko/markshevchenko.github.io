@@ -279,12 +279,26 @@ table {
   margin: 0 auto;
 }
 
+.illustration {
+  float: left;
+  margin-right: 2em;
+  margin-bottom: 1em;
+  width: 25%;
+}
+
 @media screen and (max-width: 480px) {
   body {
     font-size: 10pt;
   }
 
   .picture {
+    width: 100%;
+  }
+
+  .illustration {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 1em;
     width: 100%;
   }
 }
@@ -297,6 +311,13 @@ table {
   .picture {
     width: 100%;
   }
+
+  .illustration {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 1em;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -307,6 +328,13 @@ table {
   .picture {
     width: 100%;
   }
+
+  .illustration {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 1em;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -315,6 +343,13 @@ table {
   }
 
   .picture {
+    width: 100%;
+  }
+
+  .illustration {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 1em;
     width: 100%;
   }
 }
