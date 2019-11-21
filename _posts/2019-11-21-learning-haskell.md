@@ -21,3 +21,7 @@ excerpt:
 
 ![Надежда человечества, часть I](/img/haskell-3.jpg){: .picture}
 ![Надежда человечества, часть II](/img/haskell-4.jpg){: .picture}
+
+### Скринкасты
+
+[Плейлист](https://owa.voz.ru/owa/redir.aspx?C=pbZuXw-rhRb0h0UaH8A9SqDwDtL3-HgeW3htQUYX7XlH7pOpgW7XCA..&URL=https%3a%2f%2fwww.youtube.com%2fplaylist%3flist%3dPLUFoWyWge7mrrgIFRdRakFG0zhHrAhz9K) с записанными скринкастами на YouTube.
