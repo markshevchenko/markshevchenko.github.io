@@ -22,6 +22,12 @@ excerpt:
 ![Надежда человечества, часть I](/img/haskell-3.jpg){: .picture}
 ![Надежда человечества, часть II](/img/haskell-4.jpg){: .picture}
 
-### Скринкасты
+### Лекции Алексея по функциональному программированию
 
-[Плейлист](https://owa.voz.ru/owa/redir.aspx?C=pbZuXw-rhRb0h0UaH8A9SqDwDtL3-HgeW3htQUYX7XlH7pOpgW7XCA..&URL=https%3a%2f%2fwww.youtube.com%2fplaylist%3flist%3dPLUFoWyWge7mrrgIFRdRakFG0zhHrAhz9K) с записанными скринкастами на YouTube.
+<div class="video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/iHIQEyYSY9M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<div class="video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/WWz1VE94bAM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
