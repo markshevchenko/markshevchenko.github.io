@@ -5,7 +5,7 @@ id: learning-haskell
 excerpt: 
 ---
 
-О пользе клуба программистов. Три месяца назад мы уговорили Алексея Пирогова научить нас Хаскеллу. Чтобы было понятно, [вот](https://ru.hexlet.io/blog/posts/prepodavatel-heksleta-aleksey-pirogov-vystupil-na-konferentsii-fpure-v-kazani) доклад Алексея на FPURE в Казани, а [здесь] и [здесь] он среди спикеров конференции FPCONF. Сейчас Алексей преподает в [Хекслете](https://ru.hexlet.io/pages/about).
+О пользе клуба программистов. Три месяца назад мы уговорили Алексея Пирогова научить нас Хаскеллу. Чтобы было понятно, [вот](https://ru.hexlet.io/blog/posts/prepodavatel-heksleta-aleksey-pirogov-vystupil-na-konferentsii-fpure-v-kazani) доклад Алексея на FPURE в Казани, а [здесь](http://fpconf.ru/2016.html) и [здесь](http://fpconf.ru/2017.html) он среди спикеров конференции FPCONF. Сейчас Алексей преподает в [Хекслете](https://ru.hexlet.io/pages/about).
 
 Сразу скажу, обучение идёт медленно и трудно — голова отказывается работать. Монады уже прошли, но что это такое, ещё не разобрались.
 
