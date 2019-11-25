@@ -16,13 +16,13 @@ title: Блог
 <div id="relations">
   <ul>
     {% if paginator.previous_page %}
-      <li><a href="{{ paginator.previous_page_path }}" class="previous">Назад</a></li>
+      <li><a href="{{ paginator.previous_page_path }}" class="previous">К новым</a></li>
     {% else %}
       <li>Назад</li>
     {% endif %}
-      <li>Страница {{ paginator.page }} из {{ paginator.total_pages }}</li>
+      <li>{{ paginator.page }} из {{ paginator.total_pages }}</li>
     {% if paginator.next_page %}
-      <li><a href="{{ paginator.next_page_path }}" class="next">Вперёд</a></li>
+      <li><a href="{{ paginator.next_page_path }}" class="next">К старым</a></li>
     {% else %}
       <li class="next">Вперёд</li>
     {% endif %}
