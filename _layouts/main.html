@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}">
+    <meta name="description" content="{{ page.excerpt | default: post.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}">
     <meta name="yandex-verification" content="54e7e416b90929b5" />
     <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
