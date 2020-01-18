@@ -560,6 +560,6 @@ CREATE TABLE Magazines
 
 * **PostreSQL**. Документация на [английском](https://www.postgresql.org/docs/9.4/using-explain.html) и [русском языке](https://postgrespro.ru/docs/postgrespro/9.5/using-explain) по оператору `EXPLAIN`.
 
-* **Microsoft SQL Server**. Инструмент [SQL Server Management Studio](https://docs.microsoft.com/ru-ru/sql/ssms/sql-server-management-studio-ssms?view=sql-server-ver15) умеет [графически отображать планы выполнения](https://docs.microsoft.com/ru-ru/sql/relational-databases/performance/execution-plans?view=sql-server-ver15). Впрочем, оператор `EXPLAIN` так также [есть](https://docs.microsoft.com/ru-ru/sql/ssms/sql-server-management-studio-ssms?view=sql-server-ver15).
+* **Microsoft SQL Server**. Инструмент [SQL Server Management Studio](https://docs.microsoft.com/ru-ru/sql/ssms/sql-server-management-studio-ssms?view=sql-server-ver15) умеет [графически отображать планы выполнения](https://docs.microsoft.com/ru-ru/sql/relational-databases/performance/execution-plans?view=sql-server-ver15). Впрочем, оператор `EXPLAIN` тоже [есть](https://docs.microsoft.com/ru-ru/sql/ssms/sql-server-management-studio-ssms?view=sql-server-ver15).
 
 * **Oracle**. [`EXPLAIN PLAN`](https://docs.oracle.com/cd/B10501_01/server.920/a96533/ex_plan.htm).
