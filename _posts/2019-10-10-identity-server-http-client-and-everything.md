@@ -2,7 +2,7 @@
 title: IdentityServer, HttpClient и всё такое
 date: "2019-10-10 12:00:00 +0300"
 id: identity-server-http-client-and-everything
-excerpt: Два рабочих дня потречены, чтобы разобраться, почему HttpClient так странно работает.
+excerpt: "Два рабочих дня потречены, чтобы разобраться, почему HttpClient так странно работает."
 ---
 
 Давно надо было опробовать **IdentityServer4**, который Microsoft выпустила три года назад, в декабре 2016-го.
