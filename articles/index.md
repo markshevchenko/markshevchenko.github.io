@@ -36,6 +36,11 @@ title: Статьи
 </div>
 
 <div class="notice">
+  <h4><a href="git-cheat-sheet/">Шпаргалка по git</a></h4>
+  <p>Что делать, когда под руками нет SourceTree.</p>
+</div>
+
+<div class="notice">
   <h4><a href="efficient-communication-principles/">Принципы дельного общения</a></h4>
   <p>Не о программировании. Разместил из-за ностальгии, какой я был умный двадцать лет назад.</p>
 </div>
