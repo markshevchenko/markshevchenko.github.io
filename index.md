@@ -1,5 +1,6 @@
 ---
 layout: page
+excerpt: Сайт Марка Шевченко — программиста, тимлида, организатора встреч Московского клуба программистов.
 ---
 
 <img src="{{ "/img/markshevchenko.jpg" | relative_url}}" alt="собственной персоной" style="float: right; margin: 0 0 16pt 16pt; width: 20%" />
