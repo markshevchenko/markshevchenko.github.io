@@ -65,7 +65,7 @@ excerpt: "Онлайн-курс по C#, ООП, DDD, тестам, SOLID, па�
 
 ## Запись занятия
 
-[Чат](/downloads/write-online-stop-on-csharp-1.txt)
+[Чат](/download/write-online-shop-on-csharp-1.txt)
 
 <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/L2OC525fkGk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
