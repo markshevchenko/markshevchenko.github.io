@@ -1,0 +1,3 @@
+00:22:12	Vladimir_sva:	у значения типа decimal справа m --> money
+01:25:01	Vladimir_sva:	В тексте коммита можно делать ссылку на issue id, и после мерджа issue на гитхаб автоматически закроется
+02:09:58	Vladimir_sva:	Умеет, там ожидается одно из ключевых слов: close, closes, closed, fix, fixes, fixed, а потом #5
