@@ -275,6 +275,8 @@ table {
 
 .picture {
   width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .illustration {
@@ -282,6 +284,7 @@ table {
   margin-right: 0;
   margin-bottom: 1em;
   width: 100%;
+  height: auto;
 }
 
 body {
@@ -306,14 +309,7 @@ body {
   }
 
   .picture {
-    width: 100%;
-  }
-
-  .illustration {
-    float: none;
-    margin-right: 0;
-    margin-bottom: 1em;
-    width: 100%;
+    width: 80%;
   }
 }
 
@@ -408,9 +404,7 @@ body {
   }
 
   .picture {
-    width: 61.80%;
-    height: auto;
-    margin: 0 auto;
+    width: 66.7%;
   }
   
   .illustration {
