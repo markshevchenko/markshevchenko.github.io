@@ -274,23 +274,6 @@ table {
 }
 
 .picture {
-  width: 61.80%;
-  height: auto;
-  margin: 0 auto;
-}
-
-.illustration {
-  float: left;
-  margin-right: 2em;
-  margin-bottom: 1em;
-  width: 25%;
-}
-
-body {
-  font-size: 10pt;
-}
-
-.picture {
   width: 100%;
 }
 
@@ -301,37 +284,19 @@ body {
   width: 100%;
 }
 
+body {
+  font-size: 10pt;
+}
+
 @media screen and (min-width: 640px) {
   body {
     font-size: 12pt;
-  }
-
-  .picture {
-    width: 100%;
-  }
-
-  .illustration {
-    float: none;
-    margin-right: 0;
-    margin-bottom: 1em;
-    width: 100%;
   }
 }
 
 @media screen and (min-width: 800px) {
   body {
     font-size: 14pt;
-  }
-
-  .picture {
-    width: 100%;
-  }
-
-  .illustration {
-    float: none;
-    margin-right: 0;
-    margin-bottom: 1em;
-    width: 100%;
   }
 }
 
@@ -352,7 +317,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1200px) {
   body {
     display: grid;
     grid-template-columns: 2fr max-content $aside-width 2fr;
@@ -441,6 +406,19 @@ body {
     -ms-grid-column-span: 2;
     -ms-grid-row: 8;
   }
+
+  .picture {
+    width: 61.80%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .illustration {
+    float: left;
+    margin-right: 2em;
+    margin-bottom: 1em;
+    width: 25%;
+  }
 }
 
 @media print {
@@ -457,5 +435,18 @@ body {
 
   .lyrics {
     margin-left: $spacing-unit * 8;
+  }
+
+  .picture {
+    width: 61.80%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .illustration {
+    float: left;
+    margin-right: 2em;
+    margin-bottom: 1em;
+    width: 25%;
   }
 }
