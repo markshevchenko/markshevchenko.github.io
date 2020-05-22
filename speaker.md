@@ -12,4 +12,3 @@ description: Если вы пригласили меня с докладом и 
 
 Telegram: @markshevchenko<br />
 GitHub: https://github.com/markshevchenko<br />
-Stack Overflow: http://ru.stackoverflow.com/users/182162/mark-shevchenko
