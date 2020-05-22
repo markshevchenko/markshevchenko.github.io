@@ -10,6 +10,6 @@ description: Если вы пригласили меня с докладом и 
 
 Марк Шевченко программирует с 1989 года. Писал на C, C++, Delphi, Perl, PHP, C#, Ruby и F#. Организует встречи Московского клуба программистов. Помогает коллегам делать интересные доклады и писать хорошие статьи.
 
-Telegram: @markshevchenko
-GitHub: https://github.com/markshevchenko
+Telegram: @markshevchenko<br />
+GitHub: https://github.com/markshevchenko<br />
 Stack Overflow: http://ru.stackoverflow.com/users/182162/mark-shevchenko
