@@ -126,7 +126,7 @@ excerpt: Мы такие же, как все, только на работу е�
 ```yaml
 lang: ru-RU
 encoding: utf-8
-url: http://progmsk.github.io
+url: https://progmsk.github.io
 permalink: pretty
 highlighter: rouge
 markdown: kramdown
@@ -509,7 +509,7 @@ Jekyll разбивает записи на страницы с помощью �
 ```yaml
 lang: ru-RU
 encoding: utf-8
-url: http://prog.msk.ru
+url: https://prog.msk.ru
 permalink: pretty
 highlighter: rouge
 markdown: kramdown
@@ -579,7 +579,7 @@ Jekyll умеет создавать ленту новостей в формат
 lang: ru-RU
 encoding: utf-8
 
-url: http://prog.msk.ru
+url: https://prog.msk.ru
 title: Московский клуб программистов
 
 permalink: pretty
@@ -620,26 +620,26 @@ paginate_path: "/:num"
 После компиляции сайта в коде страницы мы увидим ссылку на документ Atom как раз на месте {% raw %}`{% feed_meta %}`{% endraw %}.
 
 ```html
-<link type="application/atom+xml" rel="alternate" href="http://prog.msk.ru/feed.xml" title="Московский клуб программистов" />
+<link type="application/atom+xml" rel="alternate" href="https://prog.msk.ru/feed.xml" title="Московский клуб программистов" />
 ```
 
 Наконец, вот и сам документ:
 ```xml
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ru-RU">
   <generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator>
-  <link href="http://prog.msk.ru/feed.xml" rel="self" type="application/atom+xml"/>
-  <link href="http://prog.msk.ru/" rel="alternate" type="text/html" hreflang="ru-RU"/>
+  <link href="https://prog.msk.ru/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://prog.msk.ru/" rel="alternate" type="text/html" hreflang="ru-RU"/>
   <updated>2018-04-03T15:39:58+00:00</updated>
-  <id>http://prog.msk.ru/</id>
+  <id>https://prog.msk.ru/</id>
   <title type="html">progmsk.github.io</title>
   <subtitle>Сайт московского клуба программистов</subtitle>
   <entry>
     <title type="html">Тестовая запись</title>
-    <link href="http://prog.msk.ru/2018/04/02/first-post/" rel="alternate" type="text/html" title="Тестовая запись"/>
+    <link href="https://prog.msk.ru/2018/04/02/first-post/" rel="alternate" type="text/html" title="Тестовая запись"/>
     <published>2018-04-02T00:00:00+00:00</published>
     <updated>2018-04-02T00:00:00+00:00</updated>
-    <id>http://prog.msk.ru/2018/04/02/first-post</id>
-    <content type="html" xml:base="http://prog.msk.ru/2018/04/02/first-post/">
+    <id>https://prog.msk.ru/2018/04/02/first-post</id>
+    <content type="html" xml:base="https://prog.msk.ru/2018/04/02/first-post/">
       <p>Проверка работы GitHub Pages.</p> <!--more--> <p>Создали тестовую запись.</p>
     </content>
     <author>
@@ -751,7 +751,7 @@ paginate_path: "blog/:num"
 ```javascript
 window.addEventListener('load', function() {
   var request = new XMLHttpRequest();
-  request.open('GET', 'http://markshevchenko.pro/feed.xml', true);
+  request.open('GET', 'https://markshevchenko.pro/feed.xml', true);
 
   request.onload = function(data) {
     if (data.target.status >= 200 && data.target.status < 300) {
@@ -780,11 +780,11 @@ XML в виде объекта `Document`.
 ```xml
 <entry>
   <title type="html">Тестовая запись</title>
-  <link href="http://prog.msk.ru/2018/04/02/first-post/" rel="alternate" type="text/html" title="Тестовая запись"/>
+  <link href="https://prog.msk.ru/2018/04/02/first-post/" rel="alternate" type="text/html" title="Тестовая запись"/>
   <published>2018-04-02T00:00:00+00:00</published>
   <updated>2018-04-02T00:00:00+00:00</updated>
-  <id>http://prog.msk.ru/2018/04/02/first-post</id>
-  <content type="html" xml:base="http://prog.msk.ru/2018/04/02/first-post/">
+  <id>https://prog.msk.ru/2018/04/02/first-post</id>
+  <content type="html" xml:base="https://prog.msk.ru/2018/04/02/first-post/">
     <p>Проверка работы GitHub Pages.</p> <!--more--> <p>Создали тестовую запись.</p>
   </content>
   <author>
@@ -897,7 +897,7 @@ excerpt: Тяжела и неказиста жизнь простого прог
 <script>
   window.addEventListener('load', function() {
     var request = new XMLHttpRequest();
-    request.open('GET', 'http://markshevchenko.pro/feed.xml', true);
+    request.open('GET', 'https://markshevchenko.pro/feed.xml', true);
     request.onload = function(data) {
       if (data.target.status >= 200 && data.target.status < 300) {
         var feed = data.target.responseXML;
