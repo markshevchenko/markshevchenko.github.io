@@ -1,7 +1,7 @@
 ---
 title: "Пишем интернет-магазин на C# (Занятие 6/8)"
-date: "2020-05-26 19:00:00 +0300"
-id: write-online-store-on-csharp-5
+date: "2020-06-02 19:00:00 +0300"
+id: write-online-store-on-csharp-6
 excerpt: "Онлайн-курс по C#, ООП, DDD, тестам, SOLID, паттернам проектирования, Agile."
 ---
 
