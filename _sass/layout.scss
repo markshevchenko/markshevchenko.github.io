@@ -292,19 +292,19 @@ body {
   font-size: 10pt;
 }
 
-@media screen and (min-width: 640px) {
+@media only screen and (min-width: 600px) {
   body {
     font-size: 12pt;
   }
 }
 
-@media screen and (min-width: 800px) {
+@media only screen and (min-width: 768px) {
   body {
     font-size: 14pt;
   }
 }
 
-@media screen and (min-width: 960px) {
+@media only screen and (min-width: 992px) {
   body {
     font-size: 16pt;
   }
@@ -314,7 +314,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   body {
     display: grid;
     grid-template-columns: 2fr max-content $aside-width 2fr;
@@ -331,6 +331,18 @@ body {
 
     -ms-grid-column: 3;
     -ms-grid-row: 1;
+  }
+
+  h1 {
+    font-size: 150%;
+  }
+  
+  h2 {
+    font-size: 140%;
+  }
+  
+  h3 {
+    font-size: 130%;
   }
 
   #home img {
