@@ -5,7 +5,7 @@ id: write-online-store-on-csharp-3
 excerpt: "Онлайн-курс по C#, ООП, DDD, тестам, SOLID, паттернам проектирования, Agile."
 ---
 
-Третье занятие из цикла.
+Как писать веб-приложения: ASP.NET Core, Razor, Сессии, как хранить корзину на сервере.
 
 [Чат](/download/write-online-shop-on-csharp-3.txt)
 
