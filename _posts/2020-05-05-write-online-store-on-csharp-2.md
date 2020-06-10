@@ -5,7 +5,7 @@ id: write-online-store-on-csharp-2
 excerpt: "Онлайн-курс по C#, ООП, DDD, тестам, SOLID, паттернам проектирования, Agile."
 ---
 
-Второе занятие из цикла.
+Модульное тестирование. Как разбивать код, чтобы покрывать его тестами.
 
 [Чат](/download/write-online-shop-on-csharp-2.txt)
 
