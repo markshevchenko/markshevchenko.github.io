@@ -10,6 +10,8 @@ Entity Framework. Полнотекстовый поиск в EF Core и MS SQL.
 
 [Чат](/download/write-online-shop-on-csharp-7.txt)
 
+## Запись занятия
+
 <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/zcMdZvWtzSM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

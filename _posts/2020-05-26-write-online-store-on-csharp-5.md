@@ -12,6 +12,8 @@ Open Closed Principle (код, открытый для расширения и �
 
 [Чат](/download/write-online-shop-on-csharp-5.txt)
 
+## Запись занятия
+
 <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/AFrg30Tk5To" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

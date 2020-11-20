@@ -70,3 +70,9 @@ excerpt: "Онлайн-курс по C#, ООП, DDD, тестам, SOLID, па�
 <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/L2OC525fkGk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+## Ответы на вопросы занятия 1
+
+<div class="video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/HNrJTL42p44" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

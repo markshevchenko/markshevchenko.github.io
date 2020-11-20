@@ -11,8 +11,6 @@ excerpt: "Онлайн-доклад для .NET Community."
 
 [Слайды](/download/history-of-program-languages-for-csharp-programmers.pdf)
 
-Видео
-
 <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/XPnVY88BUik?start=4950" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
