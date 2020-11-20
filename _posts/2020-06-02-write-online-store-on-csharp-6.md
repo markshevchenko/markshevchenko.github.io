@@ -10,6 +10,14 @@ excerpt: "Онлайн-курс по C#, ООП, DDD, тестам, SOLID, па�
 
 [Чат](/download/write-online-shop-on-csharp-6.txt)
 
+## Запись занятия
+
 <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/K4CpLIo_Eew" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+## Ответы на вопросы занятия 6
+
+<div class="video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ofFOcb6dlIM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
