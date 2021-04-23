@@ -6,6 +6,11 @@ title: Статьи
 # Статьи
 
 <div class="notice">
+  <h4><a href="microservices-with-c-sharp/">Микросервисы на C#</a></h4>
+  <p>История микросервисов и C#. Особенности реализации микросервисов на C#.</p>
+</div>
+
+<div class="notice">
   <h4><a href="index-theory/">Теория индексов</a></h4>
   <p>Что нужно знать, чтобы писать быстрые SQL запросы.</p>
 </div>
