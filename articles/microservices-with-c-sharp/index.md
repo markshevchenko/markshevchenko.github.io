@@ -6,3 +6,5 @@ id: microservices-with-c-sharp
 
 [Часть I. Микросервисы](microservices)
 
+[Часть II. Веб в .NET](web-in-dotnet)
+
