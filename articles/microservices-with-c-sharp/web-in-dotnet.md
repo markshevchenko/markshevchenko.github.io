@@ -52,7 +52,7 @@ public class TodoItemsController : ControllerBase
 
 Так выглядит обработчик запроса в .NET Core. Мы видим атрибуты `Route` и `HttpGet`, которые помогают фреймворку понять, что запрос `GET api/v1/todo-items/100` соответствует методу `GetByIdAsync`, а число **100** — параметру `id`.
 
-Код работает асинхронно, но благодаря волшебству компилятора C#, выглядит синхронным.
+Код работает асинхронно, но благодаря _магии_ компилятора C#, выглядит синхронным.
 Возвращаемый объект класса TodoItem будет преобразован в JSON или XML, в зависимости от предпочтений клиента.
 
 В целом, код не кажется сложным, особенно, если у вас есть опыт чтения исходников на C, C++ или Java.
@@ -61,41 +61,43 @@ public class TodoItemsController : ControllerBase
 
 Не все программисты понимают, зачем нужна асинхронность в веб-приложениях. Об этом стоит поговорить.
 
-Сравним производительность трёх версий веб-сервера: последовательного синхронного, параллельного и асинхронного.
+Сравним производительность трёх версий веб-сервера: обычного, параллельного и асинхронного.
 
-#### Последовательный синхронный веб-сервер
+#### Обычный веб-сервер
+
+Обычным мы будем называть не-параллельный и не-асинхронный веб-сервер.
 
 Наш веб-сервер возвращает простой HTML-документ, если мы посылаем ему запрос `GET /`. Я убрал из примера весь лишний код, в частности, обрабтку ошибок.
 
 ```c#
- var listener = new HttpListener();
+var listener = new HttpListener();
 listener.Prefixes.Add("http://localhost:8080/");
 listener.Start();
 
 while (true)
 {
-	var context = listener.GetContext();
+    var context = listener.GetContext();
     if (context.Request.HttpMethod == "GET" && context.Request.RawUrl == "/")
     {
-//		Thread.Sleep(100);
-		context.Response.StatusCode = 200;
+//        Thread.Sleep(100);
+        context.Response.StatusCode = 200;
 
-		using (var writer = new StreamWriter(context.Response.OutputStream))
-		{
-			writer.WriteLine("<!DOCTYPE html>");
-			writer.WriteLine("<html lang='en' xmlns='http://www.w3.org/1999/xhtml'>");
-			writer.WriteLine("  <head>");
-			writer.WriteLine("  <meta charset='utf-8' />");
-			writer.WriteLine("  <title>Example HTTP server</title>");
-			writer.WriteLine("  </head>");
-			writer.WriteLine("  <body>");
-			writer.WriteLine("    <p>Example HTTP server</p>");
-			writer.WriteLine("  </body>");
-			writer.WriteLine("</html>");
-		}
-	}
-	else
-		context.Response.StatusCode = 404;
+        using (var writer = new StreamWriter(context.Response.OutputStream))
+        {
+            writer.WriteLine("<!DOCTYPE html>");
+            writer.WriteLine("<html lang='en' xmlns='http://www.w3.org/1999/xhtml'>");
+            writer.WriteLine("  <head>");
+            writer.WriteLine("  <meta charset='utf-8' />");
+            writer.WriteLine("  <title>Example HTTP server</title>");
+            writer.WriteLine("  </head>");
+            writer.WriteLine("  <body>");
+            writer.WriteLine("    <p>Example HTTP server</p>");
+            writer.WriteLine("  </body>");
+            writer.WriteLine("</html>");
+        }
+    }
+    else
+        context.Response.StatusCode = 404;
 
     context.Response.OutputStream.Close();
 }
@@ -124,38 +126,38 @@ listener.Start();
 
 while (true)
 {
-	var context = listener.GetContext();
+    var context = listener.GetContext();
 
-	var thread = new Thread(ProcessRequest);
-	thread.Start(context);
+    var thread = new Thread(ProcessRequest);
+    thread.Start(context);
 }
 
 . . .
 
 void ProcessRequest(object parameter)
 {
-	var context = (HttpListenerContext) parameter;
+    var context = (HttpListenerContext) parameter;
     if (context.Request.HttpMethod == "GET" && context.Request.RawUrl == "/")
     {
-//		Thread.Sleep(100);
-		context.Response.StatusCode = 200;
+//        Thread.Sleep(100);
+        context.Response.StatusCode = 200;
 
-		using (var writer = new StreamWriter(context.Response.OutputStream))
-		{
-			writer.WriteLine("<!DOCTYPE html>");
-			writer.WriteLine("<html lang='en' xmlns='http://www.w3.org/1999/xhtml'>");
-			writer.WriteLine("  <head>");
-			writer.WriteLine("  <meta charset='utf-8' />");
-			writer.WriteLine("  <title>Example HTTP server</title>");
-			writer.WriteLine("  </head>");
-			writer.WriteLine("  <body>");
-			writer.WriteLine("    <p>Example HTTP server</p>");
-			writer.WriteLine("  </body>");
-			writer.WriteLine("</html>");
-		}
-	}
-	else
-		context.Response.StatusCode = 404;
+        using (var writer = new StreamWriter(context.Response.OutputStream))
+        {
+            writer.WriteLine("<!DOCTYPE html>");
+            writer.WriteLine("<html lang='en' xmlns='http://www.w3.org/1999/xhtml'>");
+            writer.WriteLine("  <head>");
+            writer.WriteLine("  <meta charset='utf-8' />");
+            writer.WriteLine("  <title>Example HTTP server</title>");
+            writer.WriteLine("  </head>");
+            writer.WriteLine("  <body>");
+            writer.WriteLine("    <p>Example HTTP server</p>");
+            writer.WriteLine("  </body>");
+            writer.WriteLine("</html>");
+        }
+    }
+    else
+        context.Response.StatusCode = 404;
 
     context.Response.OutputStream.Close();
 }
@@ -189,51 +191,45 @@ listener.Stop();
 
 void AsyncProcessRequest(IAsyncResult ar)
 {
-	var listener = (HttpListener)ar.AsyncState;
-	listener.BeginGetContext(AsyncProcessRequest, listener);
+    var listener = (HttpListener)ar.AsyncState;
+    listener.BeginGetContext(AsyncProcessRequest, listener);
 
-	var context = listener.EndGetContext(ar);
+    var context = listener.EndGetContext(ar);
     if (context.Request.HttpMethod == "GET" && context.Request.RawUrl == "/")
     {
-		context.Response.StatusCode = 200;
+        context.Response.StatusCode = 200;
+//        Thread.Sleep(100);
+        using (var memoryStream = new MemoryStream())
+        using (var writer = new StreamWriter(memoryStream, leaveOpen: true))
+        {
+            writer.WriteLine("<!DOCTYPE html>");
+            writer.WriteLine("<html lang='en' xmlns='http://www.w3.org/1999/xhtml'>");
+            writer.WriteLine("  <head>");
+            writer.WriteLine("  <meta charset='utf-8' />");
+            writer.WriteLine("  <title>Example HTTP server</title>");
+            writer.WriteLine("  </head>");
+            writer.WriteLine("  <body>");
+            writer.WriteLine("    <p>Example HTTP server</p>");
+            writer.WriteLine("  </body>");
+            writer.WriteLine("</html>");
 
-//		Thread.Sleep(100);
-		using (var memoryStream = new MemoryStream())
-		using (var writer = new StreamWriter(memoryStream, leaveOpen: true))
-		{
-			writer.WriteLine("<!DOCTYPE html>");
-			writer.WriteLine("<html lang='en' xmlns='http://www.w3.org/1999/xhtml'>");
-			writer.WriteLine("  <head>");
-			writer.WriteLine("  <meta charset='utf-8' />");
-			writer.WriteLine("  <title>Example HTTP server</title>");
-			writer.WriteLine("  </head>");
-			writer.WriteLine("  <body>");
-			writer.WriteLine("    <p>Example HTTP server</p>");
-			writer.WriteLine("  </body>");
-			writer.WriteLine("</html>");
-
-			var buffer = memoryStream.ToArray();
-			context.Response.OutputStream.BeginWrite(
-				buffer,
-				0,
-				buffer.Length,
-				AsyncWriteResponse,
-				context.Response.OutputStream
-			);
-		}
-	}
-	else
-	{
-		context.Response.StatusCode = 404;
-	    context.Response.OutputStream.Close();
-	}
+            var buffer = memoryStream.ToArray();
+            context.Response.OutputStream.BeginWrite(buffer, 0, buffer.Length,
+                AsyncWriteResponse, context.Response.OutputStream);
+        }
+    }
+    else
+    {
+        context.Response.StatusCode = 404;
+        context.Response.OutputStream.Close();
+    }
 }
 
 void AsyncWriteResponse(IAsyncResult ar)
 {
-	var outputStream = (Stream)ar.AsyncState;
-	outputStream.EndWrite(ar);
-	outputStream.Close();
+    var outputStream = (Stream)ar.AsyncState;
+    outputStream.EndWrite(ar);
+    outputStream.Close();
 }
 ```
 
@@ -273,38 +269,38 @@ listener.Stop();
 
 async Task GetContextAsync(HttpListener listener)
 {
-	await Task.Yield();
+    await Task.Yield();
 	
-	var context = await listener.GetContextAsync();
+    var context = await listener.GetContextAsync();
 
-	await GetContextAsync(listener);
+    await GetContextAsync(listener);
 
-	if (context.Request.HttpMethod == "GET" && context.Request.RawUrl == "/")
-	{
-//		await Task.Delay(100);
-		context.Response.StatusCode = 200;
+    if (context.Request.HttpMethod == "GET" && context.Request.RawUrl == "/")
+    {
+//        await Task.Delay(100);
+        context.Response.StatusCode = 200;
 
-		using (var writer = new StreamWriter(context.Response.OutputStream))
-		{
-			await writer.WriteLineAsync("<!DOCTYPE html>");
-			await writer.WriteLineAsync("<html lang='en' xmlns='http://www.w3.org/1999/xhtml'>");
-			await writer.WriteLineAsync("  <head>");
-			await writer.WriteLineAsync("  <meta charset='utf-8' />");
-			await writer.WriteLineAsync("  <title>Example HTTP server</title>");
-			await writer.WriteLineAsync("  </head>");
-			await writer.WriteLineAsync("  <body>");
-			await writer.WriteLineAsync("    <p>Example HTTP server</p>");
-			await writer.WriteLineAsync("  </body>");
-			await writer.WriteLineAsync("</html>");
-		}
+        using (var writer = new StreamWriter(context.Response.OutputStream))
+        {
+            await writer.WriteLineAsync("<!DOCTYPE html>");
+            await writer.WriteLineAsync("<html lang='en' xmlns='http://www.w3.org/1999/   xhtml'>");
+            await writer.WriteLineAsync("  <head>");
+            await writer.WriteLineAsync("  <meta charset='utf-8' />");
+            await writer.WriteLineAsync("  <title>Example HTTP server</title>");
+            await writer.WriteLineAsync("  </head>");
+            await writer.WriteLineAsync("  <body>");
+            await writer.WriteLineAsync("    <p>Example HTTP server</p>");
+            await writer.WriteLineAsync("  </body>");
+            await writer.WriteLineAsync("</html>");
+        }
 
-		context.Response.OutputStream.Close();
-	}
-	else
-	{
-		context.Response.StatusCode = 404;
-	    context.Response.OutputStream.Close();
-	}
+        context.Response.OutputStream.Close();
+    }
+    else
+    {
+        context.Response.StatusCode = 404;
+        context.Response.OutputStream.Close();
+    }
 }
 ```
 
