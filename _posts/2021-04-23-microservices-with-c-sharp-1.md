@@ -9,4 +9,4 @@ excerpt: "История и причины появления микросерв
 
 [Год назад](/2020/05/29/microservices-on-csharp/) я переработал материал, чтобы выступить в гостях у [DotNetRu](https://dotnet.ru/communities).
 
-А сейчас пишу статью на ту же тему. Готова [первая часть](/articles/microservices-with-c-sharp/).
+А сейчас пишу статью на ту же тему. Готова [первая часть](/articles/microservices-with-c-sharp/microservices/).
