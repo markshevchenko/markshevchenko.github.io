@@ -8,4 +8,4 @@ excerpt: "История развития платформы .NET с точки 
 Написал [вторую часть](/articles/microservices-with-c-sharp/2-web-in-dotnet/) статьи
 о микросервисах.
 
-Если пропустили — [ссылка на первую часть](/articles/microservices-with-c-sharp/1-micriservices/).
+Если пропустили — [ссылка на первую часть](/articles/microservices-with-c-sharp/1-microservices/).
