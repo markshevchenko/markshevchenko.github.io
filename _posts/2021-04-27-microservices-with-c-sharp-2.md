@@ -5,7 +5,7 @@ id: microservices-with-c-sharp
 excerpt: "История развития платформы .NET с точки зрения разработки микросервисов."
 ---
 
-Написал [вторую часть](/articles/microservices-with-c-sharp/web-in-dotnet/) статьи
+Написал [вторую часть](/articles/microservices-with-c-sharp/2-web-in-dotnet/) статьи
 о микросервисах.
 
-Если пропустили — [ссылка на первую часть](/articles/microservices-with-c-sharp/micriservices/).
+Если пропустили — [ссылка на первую часть](/articles/microservices-with-c-sharp/1-micriservices/).
