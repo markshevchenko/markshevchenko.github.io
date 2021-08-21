@@ -11,6 +11,6 @@ excerpt: "История развития платформы .NET с точки 
 
 А теперь дошли руки и до цикла статей.
 
-1. [Микросервисы](/articles/microservices-with-c-sharp/1-microservices/).
-2. [Веб в .NET](/articles/microservices-with-c-sharp/2-web-in-dotnet/).
-3. [Проблемы и решения](/articles/microservices-with-c-sharp/3-problems-and-solutions/).
+1. [Микросервисы](/articles/microservices-on-c-sharp/1-microservices/).
+2. [Веб в .NET](/articles/microservices-on-c-sharp/2-web-in-dotnet/).
+3. [Проблемы и решения](/articles/microservices-on-c-sharp/3-problems-and-solutions/).
