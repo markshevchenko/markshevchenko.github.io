@@ -6,7 +6,7 @@ title: Статьи
 # Статьи
 
 <div class="notice">
-  <h4><a href="microservices-with-c-sharp/">Микросервисы на C#</a></h4>
+  <h4><a href="microservices-on-c-sharp/">Микросервисы на C#</a></h4>
   <p>История микросервисов и C#. Особенности реализации микросервисов на C#.</p>
 </div>
 
