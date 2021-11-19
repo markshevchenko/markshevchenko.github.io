@@ -1,5 +1,5 @@
 ---
-title: Фильтрация GPS-треков на F#
+title: Фильтрация GPS-треков на F# (видео)
 date: "2019-11-24 23:00:00 +0300"
 id: gps-track-filtration-on-fsharp
 excerpt: 

@@ -1,5 +1,5 @@
 ---
-title: "Учимся делать технические доклады"
+title: "Учимся делать технические доклады (видео)"
 date: "2020-03-12 19:00:00 +0300"
 id: learning-to-make-presentations
 excerpt: "Доклад в Skillbox."

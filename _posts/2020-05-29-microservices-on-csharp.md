@@ -1,5 +1,5 @@
 ---
-title: "Микросервисы на C#"
+title: "Микросервисы на C# (видео)"
 date: "2020-05-29 20:00:00 +0300"
 id: microservices-on-csharp-2
 excerpt: "Онлайн-доклад для DotNetRu."
