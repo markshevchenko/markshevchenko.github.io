@@ -110,8 +110,7 @@ public HttpClient CreateHttpClient()
 
 ## Регистрация приложения
 
-Доступ к Хранилищу должен быть предоставлен нашему приложению, а для этого его надо зарегистрировать в *Azure Active Directory*.
-Наберём *Azure Active Directory* в строке поиска в самом верху Портала:
+Доступ к Хранилищу должен быть предоставлен нашему приложению, а для этого его надо зарегистрировать в *Azure Active Directory*. Наберём *Azure Active Directory* в строке поиска в самом верху Портала:
 
 ![Azure Active Directory](/img/key-vault-5.png)
 
@@ -127,8 +126,7 @@ public HttpClient CreateHttpClient()
 
 ![Параметры нового приложения](/img/key-vault-8.png)
 
-Нам потребуется параметр, который называется *Application ID*.
-Запишем и нажмём кнопку *Settings* в заголовке. Увидим панель с настройками:
+Нам потребуется параметр, который называется *Application ID*. Запишем и нажмём кнопку *Settings* в заголовке. Увидим панель с настройками:
 
 ![Дополнительные параметры нового приложения](/img/key-vault-9.png)
 
@@ -156,8 +154,7 @@ public HttpClient CreateHttpClient()
 
 Сейчас у вас на руках должны быть *Secret Identifier*, *Application ID* и пароль, созданный для доступа к нашему приложению.
 
-Мы готовы к тому, чтобы запрограммировать загрузку сертификата из Хранилища и подключить его к `HttpClient`.
-Предположим, за обращение к финансовому API в нашем приложении отвечает гипотетический класс `FinanceClient`. Я добавил в него гипотетический метод `GetCurrentWalletAsync`, который получает из внешнего API *кошелёк пользователя*.
+Мы готовы к тому, чтобы запрограммировать загрузку сертификата из Хранилища и подключить его к `HttpClient`. Предположим, за обращение к финансовому API в нашем приложении отвечает гипотетический класс `FinanceClient`. Я добавил в него гипотетический метод `GetCurrentWalletAsync`, который получает из внешнего API *кошелёк пользователя*.
 
 Доступ идёт по каналу, защищённому клиентским сертификатом.
 
@@ -181,7 +178,7 @@ public class FinanceClient
         // https://stackoverflow.com/questions/37033073/how-can-i-create-an-x509certificate2-object-from-an-azure-key-vault-keybundle
         using (var keyVaultClient = new KeyVaultClient(GetToken))
         {
-            var secret = await keyVaultClient.GetSecretAsync(_secretIdentifier); // <- Secret Identifier
+            var secret = await keyVaultClient.GetSecretAsync(_secretIdentifier);
             var bytes = Convert.FromBase64String(secret.Value);
             var certificate = new X509Certificate2(bytes, (string)null, X509KeyStorageFlags.MachineKeySet);
             var handler = new HttpClientHandler
@@ -196,7 +193,7 @@ public class FinanceClient
     private async Task<string> GetToken(string authority, string resource, string scope)
     {
         var authenticationContext = new AuthenticationContext(authority);
-        ClientCredential clientCred = new ClientCredential(_applicationId, _password); // <- Application ID и пароль
+        ClientCredential clientCred = new ClientCredential(_applicationId, _password);
         AuthenticationResult result = await authenticationContext.AcquireTokenAsync(resource, clientCred);
 
         if (result == null)
@@ -251,7 +248,7 @@ services.AddHttpClient("signed")
         });
 ```
 
-Метод `GetToken` надо разместить в том же классе `Startup`. Он доллжен выглядеть так:
+Метод `GetToken` надо разместить в том же классе `Startup`. Он должен выглядеть так:
 
 ```c#
 private async Task<string> GetToken(string authority, string resource, string scope)

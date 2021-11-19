@@ -5,8 +5,7 @@ id: json-rest-client
 excerpt: Пакет для отправки REST запросов.
 ---
 
-Разработал и опубликовал пакет для отправки REST-запросов. Сделал его, когда в четвёртый или пятый раз
-писал однотипное расширение класса [`HttpClient`](https://msdn.microsoft.com/ru-ru/library/system.net.http.httpclient(v=vs.118).aspx).
+Разработал и опубликовал пакет для отправки REST-запросов. Сделал его, когда в четвёртый или пятый раз писал однотипное расширение класса [`HttpClient`](https://msdn.microsoft.com/ru-ru/library/system.net.http.httpclient(v=vs.118).aspx).
 
 ## Проблема
 
@@ -18,8 +17,7 @@ GET http://api.domain.tld/v1/resources?from=2018-04-17T11:37:00&ends_with=bar
 PUT http://api.domain.tld/v1/resources/2
 ```
 
-В теле запроса могут присутствовать дополнительные параметры, которые чаще всего закодированы в формате JSON.
-Иногда запросы возвращают результаты, также в формате JSON.
+В теле запроса могут присутствовать дополнительные параметры, которые чаще всего закодированы в формате JSON. Иногда запросы возвращают результаты, также в формате JSON.
 
 Уровень класса `HttpClient` чуть ниже требуемых задач, поэтому его приходится обвязывать расширениями.
 
@@ -47,8 +45,7 @@ resource = await jsonRestClient.GetAsync<Resource>($"resources/{resourceId}");
 await jsonRestClient.PostAsync($"resources", new Resource { Name = "foo" });
 ```
 
-Для работы объекту `JsonRestClient` нужен `HttpClient`, чтобы отправлять запросы; и базовый `Uri`, чтобы не дублировать часть
-URI, общую для всех методов.
+Для работы объекту `JsonRestClient` нужен `HttpClient`, чтобы отправлять запросы; и базовый `Uri`, чтобы не дублировать часть URI, общую для всех методов.
 
 ## Параметры строки запроса
 
@@ -58,9 +55,7 @@ URI, общую для всех методов.
 GET http://api.domain.tld/v1/resources/314/subresources?from=2018-04-17T11:37:00&ends-with=bar
 ```
 
-В примере `314`&nbsp;&mdash; это параметр, переданный в пути `/v1/resources/314/subresources`, а `2018-04-17T11:37:00`
-и `bar`&nbsp;&mdash; параметры, переданные в строке запроса. В отличие от `314`, каждый из них имеет имя,
-в нашем примере `from` и `ends-with`.
+В примере `314`&nbsp;&mdash; это параметр, переданный в пути `/v1/resources/314/subresources`, а `2018-04-17T11:37:00` и `bar`&nbsp;&mdash; параметры, переданные в строке запроса. В отличие от `314`, каждый из них имеет имя, в нашем примере `from` и `ends-with`.
 
 Вот так мы можем отправить запрос из примера:
 
@@ -80,13 +75,11 @@ var resource = await jsonRestClient.GetAsync<Resource>($"resources/{resourceId}"
 
 ## Статус 404
 
-Для методов `Get` в `JsonRestClient` предусмотрена форма `GetOrDefaultAsync`. Если запрос возвращает статус 404, метод `GetOrDefaultAsync`
-возвратит значение по умолчанию для заданного типа.
+Для методов `Get` в `JsonRestClient` предусмотрена форма `GetOrDefaultAsync`. Если запрос возвращает статус 404, метод `GetOrDefaultAsync` возвратит значение по умолчанию для заданного типа.
 
-## С глаз долой&nbsp;&mdash; из сердца вон
+## С глаз долой — из сердца вон
 
-Для методов `Put` и `Post` в `JsonRestClient` предусмотрена форма `PutAndForgetAsync`. Обычные методы `Put`/`Post` выбрасывают исключение, если
-статус ответа отличается от 2xx. &laquo;Забывчивые&raquo; методы не проверяют статус ответа совсем.
+Для методов `Put` и `Post` в `JsonRestClient` предусмотрена форма `PutAndForgetAsync`. Обычные методы `Put`/`Post` выбрасывают исключение, если статус ответа отличается от 2xx. &laquo;Забывчивые&raquo; методы не проверяют статус ответа совсем.
 
 [nuget.org](https://www.nuget.org/packages/Binateq.JsonRestClient/)
 
