@@ -1,5 +1,5 @@
 ---
-title: Вся правда о Soft Skills
+title: Вся правда о Soft Skills (видео)
 date: "2021-08-19 19:00:00 +0300"
 id: whole-truth-about-soft-skills
 excerpt: "Подготовил доклад для Московского клуба программистов."

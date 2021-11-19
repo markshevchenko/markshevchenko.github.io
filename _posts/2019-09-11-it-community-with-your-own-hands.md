@@ -1,5 +1,5 @@
 ---
-title: IT сообщество своими руками
+title: IT сообщество своими руками (видео)
 date: "2019-09-11 12:00:00 +0300"
 id: it-community-with-your-own-hands-video
 excerpt: "Видео доклада, прочитанного на препати конференции TechTrain 2019."

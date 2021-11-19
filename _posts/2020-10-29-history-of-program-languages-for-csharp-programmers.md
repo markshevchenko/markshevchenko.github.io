@@ -1,5 +1,5 @@
 ---
-title: "История языков программирования для тех, кто пишет на C#"
+title: "История языков программирования для тех, кто пишет на C# (видео)"
 date: "2020-10-29 19:00:00 +0300"
 id: history-of-program-languages-for-csharp-programmers
 excerpt: "Онлайн-доклад для .NET Community."

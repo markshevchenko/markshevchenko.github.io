@@ -1,5 +1,5 @@
 ---
-title: Микросервисы на C#
+title: Микросервисы на C# (видео)
 date: "2019-12-05 08:00:00 +0300"
 id: microservices-on-csharp
 excerpt: 
