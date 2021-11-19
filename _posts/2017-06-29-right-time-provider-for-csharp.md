@@ -6,8 +6,7 @@ excerpt: Как протестировать, что метод корректн
 
 ### Проблема
 
-Покрыть модульными тестами код, который зависит от вызова `DateTime.Now` или `DateTimeOffset.Now`. Например, при создании
-нового *поста*, *фабрика постов* заполняет поле *дата/время создания*:
+Покрыть модульными тестами код, который зависит от вызова `DateTime.Now` или `DateTimeOffset.Now`. Например, при создании нового *поста*, *фабрика постов* заполняет поле *дата/время создания*:
 
 ```c#
 public class PostFactory
@@ -19,9 +18,7 @@ public class PostFactory
 }
 ```
 
-Как протестировать, что метод корректно заполняет поле, ведь при каждом вызове `DateTime.Now` возращает
-разные значения? Один из способов заключается в том, чтобы спрятать зависимость от недетерменированного вызова
-в отдельный класс. Он даже имеет устоявшееся название&nbsp;&mdash; *поставщик времени* (time provider).
+Как протестировать, что метод корректно заполняет поле, ведь при каждом вызове `DateTime.Now` возращает разные значения? Один из способов заключается в том, чтобы спрятать зависимость от недетерменированного вызова в отдельный класс. Он даже имеет устоявшееся название&nbsp;&mdash; *поставщик времени* (time provider).
 
 ### Классическое решение
 
@@ -70,14 +67,16 @@ public class StubTimeProvider : TimeProvider
 }
 ```
 
-Эта заглушка всегда возвращает одно и то же значение текущей даты/времени, что не соответствует реальности,
-зато позволяет нам тестировать код:
+Эта заглушка всегда возвращает одно и то же значение текущей даты/времени, что не соответствует реальности, зато позволяет нам тестировать код:
 
 ```c#
 [TestMethod]
 public void Create_WhenCalled_FillsCreatedAt()
 {
-    var timeProvider = new StubTimeProvider { DefaultNow = new DateTimeOffset(2017, 06, 29, 17, 32, 10, TimeSpan.Zero) };
+    var timeProvider = new StubTimeProvider
+    {
+        DefaultNow = new DateTimeOffset(2017, 06, 29, 17, 32, 10, TimeSpan.Zero)
+    };
     var postFactory = new PostFactory(timeProvider);
         
     var post = postFactory.Create("foo", "bar");
@@ -88,16 +87,11 @@ public void Create_WhenCalled_FillsCreatedAt()
 
 ### Проблема классического решения
 
-Поставщик времени оказывается очень фундаментальной штукой, которая нужна практически во всех проектах. Чтобы не дублировать код,
-вы вынуждены завести специальный общий проект, в котором собираете все такие фундаментальные штуки. И этот проект очень скоро: а)
-превращается в свалку плохо структурированного кода; б) подключается к каждой вашей программе.
+Поставщик времени оказывается очень фундаментальной штукой, которая нужна практически во всех проектах. Чтобы не дублировать код, вы вынуждены завести специальный общий проект, в котором собираете все такие фундаментальные штуки. И этот проект очень скоро: а) превращается в свалку плохо структурированного кода; б) подключается к каждой вашей программе.
 
-В соответствии с [одним из 12-ти факторов](https://12factor.net/ru/dependencies), поставщик времени нужно вынести в отдельный
-проект, и превратить его в NuGet-пакет. Кстати, такой пакет уже [существует](https://www.nuget.org/packages/rg.TimeProvider/),
-но не поддерживает `DateTimeOffset`, только `DateTime`.
+В соответствии с [одним из 12-ти факторов](https://12factor.net/ru/dependencies), поставщик времени нужно вынести в отдельный проект, и превратить его в NuGet-пакет. Кстати, такой пакет уже [существует](https://www.nuget.org/packages/rg.TimeProvider/), но не поддерживает `DateTimeOffset`, только `DateTime`.
 
-Microsoft между тем [утверждает](https://docs.microsoft.com/en-us/dotnet/standard/datetime/choosing-between-datetime),
-что:
+Microsoft между тем [утверждает](https://docs.microsoft.com/en-us/dotnet/standard/datetime/choosing-between-datetime), что:
 
 > These uses for `DateTimeOffset` values are much more common than those for `DateTime` values.
 As a result, `DateTimeOffset` should be considered the default date and time type for application development.
