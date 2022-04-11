@@ -19,6 +19,8 @@ excerpt: "Вычисляем числа Фибоначчи разными спо
 
 Снова используем готовые тесты, чтобы убедиться, что код написал правильно. Кроме того, переписываем реализацию, потому что хотим, чтобы тесты помогали нам писать корректный код.
 
+Код, написанный в воркшопе, лежит [здесь](https://github.com/progmsk/tests/tree/main/lesson1/fsharp).
+
 <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/KZWAufn68cc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
