@@ -1,8 +1,8 @@
 ---
 title: Функциональное программирование с примерами на F#
 date: "2022-04-12 09:00:00 +0300"
-id: functional-programming-with-examples-on-fsharp-1
-excerpt: "Функции — полноправные объекты языка. Решаем уравнения и извлекаем корни на глазах у изумлённой публики."
+id: functional-programming-with-examples-on-fsharp
+excerpt: "Функции — полноправные объекты языка. Бесконечные последовательности."
 ---
 
 Человечество не только слезло с веток, человечество освоило язык Ассемблера, а иногда даже и ООП. Теперь постоянно можно встретить программиста, понявшего инкапсуляцию и выучившего все виды полиморфизма.
@@ -13,8 +13,23 @@ excerpt: "Функции — полноправные объекты языка.
 
 Этим мы и займёмся.
 
-Тема этого воркшопа: функции — полноправные объекты языка. Решаем уравнения и извлекаем корни на глазах у изумлённой публики.
+## Функции — полноправные объекты языка.
+
+Решаем уравнения и извлекаем корни на глазах у изумлённой публики.
+
+[Код](https://github.com/markshevchenko/sifsp/blob/main/sifsp/Functions.fsx),
+[императивный код](https://github.com/markshevchenko/sifsp/blob/main/imperative/main.c).
 
 <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/RH1cIyLx73g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+## Бесконечные последовательности.
+
+Быстро вычисляем число π с заоблачной точностью.
+
+[Код](https://github.com/markshevchenko/sifsp/blob/main/sifsp/Streams.fsx).
+
+<div class="video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/u9x2NBwH2B8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
