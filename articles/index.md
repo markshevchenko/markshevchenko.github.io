@@ -46,6 +46,11 @@ title: Статьи
 </div>
 
 <div class="notice">
+  <h4><a href="skype-obs-youtube-cheat-sheet/">Шпаргалка по трансляциям Skype-разговоров в YouTube</a></h4>
+  <p>С помощью OBS Studio и плагина OBS-NDI</p>
+</div>
+
+<div class="notice">
   <h4><a href="efficient-communication-principles/">Принципы дельного общения</a></h4>
   <p>Не о программировании. Разместил из-за ностальгии, какой я был умный двадцать лет назад.</p>
 </div>
