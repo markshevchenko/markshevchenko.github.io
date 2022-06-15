@@ -7,5 +7,4 @@ excerpt: Доклад, прочитанный на митапе Write The Docs.
 
 Вчера на прочитал доклад на [встрече сообщества Write the Docs](https://www.meetup.com/ru-RU/Write-the-Docs-Moscow/events/253748999/).
 
-Публикую [слайды](/presentations/elements-of-style). В презентации нажмите <kbd>C</kbd>, чтобы открыть второе окно и затем <kbd>P</kbd>, чтобы вместо слайдов
-видеть примечания.
+Публикую [слайды](/presentations/elements-of-style). В презентации нажмите <kbd>C</kbd>, чтобы открыть второе окно и затем <kbd>P</kbd>, чтобы вместо слайдов видеть примечания.
