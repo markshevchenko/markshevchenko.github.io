@@ -72,6 +72,8 @@ excerpt: "Два воркшопа, интервью, Advent of Code 2022, кур
 
 Незаметно для меня оказалось, что в круг моих организационных обязанностей входят теперь и московские деврелы. Мы собираемся один раз в месяц. В декабре [это было пятнадцатого числа](https://www.meetup.com/ru-RU/devrel-spb/events/289984863/).
 
+![DevRel Breakfast Moscow #4](https://secure.meetupstatic.com/photos/event/9/d/a/c/highres_509380364.webp){: .picture}
+
 ## Новый год
 
 Собирались в Ереване.
