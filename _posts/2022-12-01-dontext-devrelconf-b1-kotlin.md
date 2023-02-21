@@ -1,8 +1,8 @@
 ---
-title: Что я делал в ноябре
+title: DotNext, DevRelConf, Б1, воркшоп по Котлину
 date: "2022-12-01 09:00:00 +0300"
-id: what-i-did-this-november
-excerpt: "DotNext, DevRelConf, совместный митап с Б1, воркшоп по Котлину."
+id: dontext-devrelconf-b1-kotlin
+excerpt: "Результативный месяц."
 ---
 
 В самом начале ноября сделал [доклад](https://dotnext.ru/talks/9a9f9461a00747b8a2e23cacf53c38ca/) на осенней конференции DotNext 2022. Готовил его весь октябрь. Выступление шло онлайн и в Питер, как [летом](/2022/10/03/where-did-that-come-in-csharp/), ехать не пришлось.
