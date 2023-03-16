@@ -34,8 +34,8 @@ description: Рядом с программированием.
 * Клуб программистов участсвует в [Hacktoberfest](https://hacktoberfest.com/).
 * [Митап](https://www.youtube.com/live/MqO1iMVbdOs?feature=share)
   в [LENTA:U TECH](https://habr.com/ru/company/lenta_utkonos_tech/profile/). Это уже второй.
-  Первый мы, к сожалению, не смогли записать.
-* Совместный со Skillbox [онлайн-митап]https://prog.msk.ru/2021/12/09/backend-2022-leaving-comfort-zone/).
+  Первый мы, к сожалению, записать не смогли.
+* Совместный со Skillbox [онлайн-митап](https://prog.msk.ru/2021/12/09/backend-2022-leaving-comfort-zone/).
 
 ### 2021
 
@@ -50,10 +50,9 @@ description: Рядом с программированием.
 
 ### 2018
 
-* К нам [в гости пришёл евангелист Microsoft Дмитрий Сошников](https://prog.msk.ru/2018/04/12/fp/) рассказывать про F#.
+* К нам в гости пришёл [евангелист Microsoft Дмитрий Сошников](https://prog.msk.ru/2018/04/12/fp/) рассказывать про F#.
 * 1 марта создан чат клуба в Telegram.
 
 ### 2015
 
-* 17 декабря основание клуба.
-
+* 17 декабря — основание клуба.
