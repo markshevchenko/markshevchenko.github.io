@@ -2,7 +2,7 @@
 title: Advent of Code, Code Retreat, видео вместе с SBTG, бирап деврелов
 date: "2023-03-01 09:00:00 +0300"
 id: aoc-coderetreat-sbtg-devrel
-excerpt: "Новости на январь и февраль."
+excerpt: "Новости за январь и февраль."
 ---
 
 ## Advent of Code
