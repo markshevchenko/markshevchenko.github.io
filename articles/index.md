@@ -6,6 +6,11 @@ title: Статьи
 # Статьи
 
 <div class="notice">
+  <h4><a href="disloyal-unmotivated/">Нелояльный, немотивированный</a></h4>
+  <p>Карьера программиста в DevRel.</p>
+</div>
+
+<div class="notice">
   <h4><a href="microservices-on-c-sharp/">Микросервисы на C#</a></h4>
   <p>История микросервисов и C#. Особенности реализации микросервисов на C#.</p>
 </div>
