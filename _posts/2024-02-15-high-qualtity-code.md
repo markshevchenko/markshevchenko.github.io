@@ -16,5 +16,5 @@ excerpt: "Митап и трансляция."
 Наконец, Юрий Костин рассказал, как здорово в разработке безошибочного кода помогает язык с сильной типизацией и развитой системой типов — такой как TypeScript.
 
 <div class="video">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/7zS2_ZhwPfY?si=nG8mORJsRORklj3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/HIp7V7rdpXw?si=oChvZ4a17dPYFgnD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
