@@ -208,3 +208,7 @@ DR3P*RP*RP*DP*DP*LP*LP*UP*
 jgs     /__/ \__\ 
           '---'     E=mc^2
 ```
+
+## Решение
+
+Чтобы убедиться, что задачи можно решить быстро, решил [обе задачи на языке F#](https://github.com/markshevchenko/it-purple-conf).
