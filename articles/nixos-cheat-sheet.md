@@ -42,3 +42,9 @@ sudo nixos-rebuild list-generations
 ```shell
 sudo nix-collect-garbage -d
 ```
+
+Удаляем поколения также из меню загрузки:
+
+```shell
+sudo /nix/var/nix/profiles/system/bin/switch-to-configuration boot
+```
