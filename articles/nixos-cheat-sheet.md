@@ -6,7 +6,7 @@ id: nixos-cheat-sheet
 
 ## Обновление
 
-```shell
+```bash
 sudo nix-channel --update
 sudo nixos-rebuild switch
 ```
@@ -16,7 +16,7 @@ sudo nixos-rebuild switch
 
 Текущая версия в нашей системе:
 
-```shell
+```bash
 sudo nix-channel --list
 # => nixos https://nixos.org/channels/nixos-25.05
 # => rust-overlay https://github.com/oxalica/rust-overlay/archive/master.tar.gz
@@ -24,7 +24,7 @@ sudo nix-channel --list
 
 Удаляем старый канал и добавляем новый с тем же именем:
 
-```shell
+```bash
 sudo nix-channel --remove nixos
 sudo nix-channel --add https://nixos.org/channels/nixos-25.11 nixos
 ```
@@ -33,18 +33,18 @@ sudo nix-channel --add https://nixos.org/channels/nixos-25.11 nixos
 
 Смотрим, какие поколения системы не удалены:
 
-```shell
+```bash
 sudo nixos-rebuild list-generations
 ```
 
 Удаляем все поколения, кроме текущего:
 
-```shell
+```bash
 sudo nix-collect-garbage -d
 ```
 
 Удаляем поколения также из меню загрузки:
 
-```shell
+```bash
 sudo /nix/var/nix/profiles/system/bin/switch-to-configuration boot
 ```
