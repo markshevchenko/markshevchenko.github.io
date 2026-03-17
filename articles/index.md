@@ -6,10 +6,14 @@ title: Статьи
 # Статьи
 
 <div class="notice">
+  <h4><a href="where-to-store-passwords-in-nixos/">Где хранить пароли в NixOS?</a></h4>
+  <p>На примере OpenVPN и ANTHROPIC_AUTH_TOKEN.</p>
+</div>
+
+<div class="notice">
   <h4><a href="nixos-cheat-sheet/">Шпаргалка по NixOS</a></h4>
   <p>Если, как и я, обновляешь систему так редко, что забываешь, что и как запускать.</p>
 </div>
-
 
 <div class="notice">
   <h4><a href="disloyal-unmotivated/">Нелояльный, немотивированный</a></h4>
