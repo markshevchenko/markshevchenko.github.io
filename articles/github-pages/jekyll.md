@@ -1,7 +1,6 @@
 ---
 title: Сайт на GitHub Pages
 excerpt: GitHub Pages. Изучаем Jekyll.
-id: github-pages-jekyll
 ---
 
 ## Что такое GitHub Pages

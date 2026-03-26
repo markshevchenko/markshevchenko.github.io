@@ -1,7 +1,6 @@
 ---
 title: Где хранить пароли в NixOS?
 subtitle: На примере OpenVPN и ANTHROPIC_AUTH_TOKEN.
-id: where-to-store-passwords-in-nixos
 ---
 
 NixOS — дистрибутив Linux, который позволяет восстанавливать рабочее окружение за считанные минуты.

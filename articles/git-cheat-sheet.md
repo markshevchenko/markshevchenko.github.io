@@ -1,7 +1,6 @@
 ---
 title: Шпаргалка по командам git
 subtitle: Что делать, когда под руками нет SourceTree
-id: git-cheat-sheet
 ---
 
 ## Основной сценарий
