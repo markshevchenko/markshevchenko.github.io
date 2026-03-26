@@ -4,7 +4,8 @@ span.cp { /* macro */
   color: $brand-color-dark;
 }
 
-span.cm { /* comment */
+span.cm,
+span.c { /* comment */
   color: $grey-color-dark;
 }
 
@@ -23,6 +24,7 @@ span.nf { /* keyword, known function */
 
 span.mi,
 span.s,
+span.s2,
 span.se { /* constant, string */
-  color: $brand-color;
+  color: #008A52;
 }
