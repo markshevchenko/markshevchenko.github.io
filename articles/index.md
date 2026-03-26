@@ -6,6 +6,11 @@ title: Статьи
 # Статьи
 
 <div class="notice">
+  <h4><a href="vscode-in-nixos/">VS Code в NixOS</a></h4>
+  <p>Можно ли настроить VS Code декларативно?</p>
+</div>
+
+<div class="notice">
   <h4><a href="where-to-store-passwords-in-nixos/">Где хранить пароли в NixOS?</a></h4>
   <p>На примере OpenVPN и ANTHROPIC_AUTH_TOKEN.</p>
 </div>
