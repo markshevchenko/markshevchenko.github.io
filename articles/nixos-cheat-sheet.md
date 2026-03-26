@@ -1,7 +1,6 @@
 ---
 title: Шпаргалка по командам NixOS
 subtitle: Обновление и чистка системы
-id: nixos-cheat-sheet
 ---
 
 ## Обновление

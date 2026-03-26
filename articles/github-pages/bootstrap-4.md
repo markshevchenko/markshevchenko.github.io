@@ -1,7 +1,6 @@
 ---
 title: Сайт на GitHub Pages
 excerpt: GitHub Pages, прикручиваем дизайн с помощью Bootstrap 4.
-id: github-pages-bootstrap-4
 ---
 
 ## Зачем нужен Bootstrap
