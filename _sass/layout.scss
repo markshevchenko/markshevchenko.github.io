@@ -92,18 +92,18 @@ footer {
   text-align: center;
 }
 
-nav a.standard {
-  font-weight: normal;
-  text-decoration: underline;
-  color: $brand-color;
-}
-
 nav a,
 nav a:visited {
   font-weight: bold;
   text-decoration: none;
 
   color: $background-color;
+}
+
+nav a.standard {
+  font-weight: normal;
+  text-decoration: underline;
+  color: $brand-color;
 }
 
 .icon-articles,
