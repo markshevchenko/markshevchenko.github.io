@@ -88,14 +88,6 @@ footer {
   background-color: $grey-color-dark;
 }
 
-nav a,
-nav a:visited {
-  font-weight: bold;
-  text-decoration: none;
-
-  color: $background-color;
-}
-
 #profiles > p {
   text-align: center;
 }
@@ -104,6 +96,14 @@ nav a:visited {
   font-weight: normal;
   text-decoration: underline;
   color: $brand-color;
+}
+
+nav a,
+nav a:visited {
+  font-weight: bold;
+  text-decoration: none;
+
+  color: $background-color;
 }
 
 .icon-articles,
