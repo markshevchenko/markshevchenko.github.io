@@ -96,6 +96,12 @@ nav a:visited {
   color: $background-color;
 }
 
+nav a.standard {
+  font-weight: normal;
+  text-decoration: underline;
+  color: $brand-color;
+}
+
 .icon-articles,
 .icon-blog,
 .icon-github,
