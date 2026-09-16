@@ -96,7 +96,11 @@ nav a:visited {
   color: $background-color;
 }
 
-nav a.standard {
+nav > p {
+  text-align: center;
+}
+
+nav > p > a {
   font-weight: normal;
   text-decoration: underline;
   color: $brand-color;
