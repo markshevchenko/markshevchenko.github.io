@@ -109,7 +109,8 @@ nav a.standard {
 .icon-articles,
 .icon-blog,
 .icon-github,
-.icon-stackoverflow {
+.icon-stackoverflow,
+.icon-habr {
   font-family: 'icomoon';
   font-size: $small-font-size;
 
@@ -132,6 +133,10 @@ nav a.standard {
 
 .icon-stackoverflow:before {
   content: "\ead0";
+}
+
+.icon-habr {
+  content: "\e900";
 }
 
 h1 {
