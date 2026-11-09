@@ -3,7 +3,7 @@ layout: page
 excerpt: Сайт Марка Шевченко — программиста, основателя встреч Московского клуба программистов.
 ---
 
-<img src="{{ '/img/markshevchenko.jpg' | relative_url}}" alt="собственной персоной" style="float: right; margin: 0 0 16pt 16pt; width: 20%" />
+<img src="{{ '/assets/images/markshevchenko.jpg' | relative_url}}" alt="собственной персоной" style="float: right; margin: 0 0 16pt 16pt; width: 20%" />
 Меня зовут Марк Шевченко и я программист.
 Пишу на разных языках, в последнее время — на Go, пет-проекты делаю на Rust.
 В свободное от работы время организую встречи [Московского клуба программистов](programmers-club/).
