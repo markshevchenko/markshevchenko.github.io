@@ -88,6 +88,28 @@ footer {
   background-color: $grey-color-dark;
 }
 
+#profiles .devpraktika {
+  $line-height: 1.25;
+
+  margin-top: 1.5rem;
+  font-size: smaller;
+  line-height: $line-height;
+
+  @extend %clearfix;
+
+  small {
+    font-size: 1em;
+    line-height: inherit;
+  }
+
+  img {
+    float: left;
+    width: auto;
+    height: #{3 * $line-height}em;
+    margin-right: 1ch;
+  }
+}
+
 nav a,
 nav a:visited {
   font-weight: bold;
