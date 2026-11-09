@@ -78,8 +78,8 @@ excerpt: "Подводя итоги года."
 
 Собирались в Ереване.
 
-![В Ереване](/img/newyear-2023-yerevan.jpg){: .picture}
+![В Ереване](/assets/images/posts/2023-01-01-workshops-interview-aoc-hexlet-new-year/newyear-2023-yerevan.jpg){: .picture}
 
 И в Москве.
 
-![В Москве](/img/newyear-2023-moscow.jpg){: .picture}
+![В Москве](/assets/images/posts/2023-01-01-workshops-interview-aoc-hexlet-new-year/newyear-2023-moscow.jpg){: .picture}

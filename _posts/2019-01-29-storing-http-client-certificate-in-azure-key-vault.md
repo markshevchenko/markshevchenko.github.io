@@ -92,19 +92,19 @@ public HttpClient CreateHttpClient()
 
 Чтобы добавить сертификат в хранилище, откроем портал Azure, а в нём&nbsp;&mdash; Key Vault. В панели слева мы должны увидеть вкладку *Certificates*.
 
-![Список сертификатов](/img/key-vault-1.png)
+![Список сертификатов](/assets/images/posts/2019-01-29-storing-http-client-certificate-in-azure-key-vault/key-vault-1.png)
 
 На вкладке в верхней панели нажмём *Generate/Import*. Укажем метод *Import*, загрузим сертификат, дадим ему имя и введём пароль.
 
-![Импорт сертификата](/img/key-vault-2.png)
+![Импорт сертификата](/assets/images/posts/2019-01-29-storing-http-client-certificate-in-azure-key-vault/key-vault-2.png)
 
 Мы увидим сертификат в списке. Откроем:
 
-![Новый сертификат](/img/key-vault-3.png)
+![Новый сертификат](/assets/images/posts/2019-01-29-storing-http-client-certificate-in-azure-key-vault/key-vault-3.png)
 
 Дважды щёлкнем на записи *Current Version*, чтобы посмотреть параметры сертификата.
 
-![Параметры нового сертификата](/img/key-vault-4.png)
+![Параметры нового сертификата](/assets/images/posts/2019-01-29-storing-http-client-certificate-in-azure-key-vault/key-vault-4.png)
 
 Нам понадобится параметр *Secret Identifier*, поэтому сохраним его в текстовом файле.
 
@@ -112,41 +112,41 @@ public HttpClient CreateHttpClient()
 
 Доступ к Хранилищу должен быть предоставлен нашему приложению, а для этого его надо зарегистрировать в *Azure Active Directory*. Наберём *Azure Active Directory* в строке поиска в самом верху Портала:
 
-![Azure Active Directory](/img/key-vault-5.png)
+![Azure Active Directory](/assets/images/posts/2019-01-29-storing-http-client-certificate-in-azure-key-vault/key-vault-5.png)
 
 В панели слева выберем закладку *App registrations*:
 
-![Список зарегистрированных приложений](/img/key-vault-6.png)
+![Список зарегистрированных приложений](/assets/images/posts/2019-01-29-storing-http-client-certificate-in-azure-key-vault/key-vault-6.png)
 
 Нажмём кнопку *New application registration* и введём параметры приложения:
 
-![Регистрация приложения](/img/key-vault-7.png)
+![Регистрация приложения](/assets/images/posts/2019-01-29-storing-http-client-certificate-in-azure-key-vault/key-vault-7.png)
 
 Не имеет значения, что мы введём в *Sign-on URL*. Главное, сохраним поле *Name*&nbsp;&mdash; оно нам понадобится на следующем шаге. Добавив приложение, мы не увидим его в списке, поскольку установлен фильтр *My apps*. Переключимся на *All apps*, найдём своё приложение и откроем его.
 
-![Параметры нового приложения](/img/key-vault-8.png)
+![Параметры нового приложения](/assets/images/posts/2019-01-29-storing-http-client-certificate-in-azure-key-vault/key-vault-8.png)
 
 Нам потребуется параметр, который называется *Application ID*. Запишем и нажмём кнопку *Settings* в заголовке. Увидим панель с настройками:
 
-![Дополнительные параметры нового приложения](/img/key-vault-9.png)
+![Дополнительные параметры нового приложения](/assets/images/posts/2019-01-29-storing-http-client-certificate-in-azure-key-vault/key-vault-9.png)
 
 Нам нужна вкладка *Keys*. Как видите, мы можем создать здесь *пароли* (*Passwords*) и *публичные ключи* (*Public Keys*). Нам нужен новый пароль. Введём описание, выберем время жизни пароля и нажмём кнопку *Save* наверху:
 
-![Создание пароля](/img/key-vault-10.png)
+![Создание пароля](/assets/images/posts/2019-01-29-storing-http-client-certificate-in-azure-key-vault/key-vault-10.png)
 
 Здесь будьте осторожны. Портал показывает вам значение созданного пароля, чтобы вы могли его скопировать и сохранить. Сейчас самое время это сделать, потому что потом увидеть пароль в Портале будет нельзя. Об этом и предупреждение вверху экрана.
 
-![Значение пароля](/img/key-vault-11.png)
+![Значение пароля](/assets/images/posts/2019-01-29-storing-http-client-certificate-in-azure-key-vault/key-vault-11.png)
 
 ## Политика доступа
 
 Мы на предпоследнем шаге. Вернёмся в Хранилище ключей. В левой панели откроем вкладку *Access policies*:
 
-![Список политик доступа](/img/key-vault-12.png)
+![Список политик доступа](/assets/images/posts/2019-01-29-storing-http-client-certificate-in-azure-key-vault/key-vault-12.png)
 
 Нажмём кнопку *Add new*. Выберем шаблон *Key, Secret, & Certificate Management*. В поле *Select principal* выберем приложение, которое мы зарегистрировали на предыдущем шаге. Я просил вас запомнить его название, сейчас оно пригодится.
 
-![Список политик доступа](/img/key-vault-13.png)
+![Список политик доступа](/assets/images/posts/2019-01-29-storing-http-client-certificate-in-azure-key-vault/key-vault-13.png)
 
 В поле *Authorized application* оставим существующее значение *None selected*. Нажмём кнопку *Ok* и вернёмся к список политик доступа. **Очень важно** нажать кнопку *Save* в верхней части панели.
 
