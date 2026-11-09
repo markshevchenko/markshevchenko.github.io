@@ -36,11 +36,11 @@ PDF, английский язык.
 
 Зайдите в Творческую студию и нажмите кнопку *Создать*. Выберите *Начать трансляцию*.
 
-![Начать трансляцию YouTube](/img//skype-obs-youtube-04.png){: .picture}
+![Начать трансляцию YouTube](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-04.png){: .picture}
 
 Откроется страница управления трансляциями. Нажмите кнопку *Запланировать трансляцию*. Пре первом запуске вам потребуется настроить параметры трансляции, при последующих вы можете использовать настройки предыдущей трансляции. Выбирайте вариант *Reuse settings*.
 
-![Использовать настройки предыдущей трансляции](/img//skype-obs-youtube-05.png){: .picture}
+![Использовать настройки предыдущей трансляции](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-05.png){: .picture}
 
 Поменяйте *Название* и *Описание*. **Не забудьте поменять *Значок*, если они разные в ваших трансляциях.**
 
@@ -48,7 +48,7 @@ PDF, английский язык.
 
 После создания скопируйте ссылку для анонса. Нажмите стрелку в правом верхнем углу (на рисунке обведена), чтобы открыть окно *Поделиться*. Ссылка на трансляцию — в нижней части окна.
 
-![Поделиться ссылкой](/img//skype-obs-youtube-06.png){: .picture}
+![Поделиться ссылкой](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-06.png){: .picture}
 
 #### Заранее установите контакты со всеми собеседниками
 
@@ -60,21 +60,21 @@ PDF, английский язык.
 
 Зайдите в настройки Skype на **компьютере режиссёра**.
 
-![Зайти в настройки Skype](/img//skype-obs-youtube-01.png){: .picture}
+![Зайти в настройки Skype](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-01.png){: .picture}
 
 Выберите *Звонки*, затем *Дополнительно*.
 
-![Выбрать дополнительные настройки звонков](/img//skype-obs-youtube-02.png){: .picture}
+![Выбрать дополнительные настройки звонков](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-02.png){: .picture}
 
 Разрешите использование NDI. **Важно. Этот шаг надо повторять каждый раз. Skype время от времени снимает этот переключатель. Кажется, что при выходе-входе.**
 
-![Разрешить использование NDI](/img//skype-obs-youtube-03.png){: .picture}
+![Разрешить использование NDI](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-03.png){: .picture}
 
 #### Создайте групповой чат в Skype
 
 В **режиссёрской учётке** создайте групповой чат.
 
-![Создать групповой чат в Skype](/img//skype-obs-youtube-07.png){: .picture}
+![Создать групповой чат в Skype](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-07.png){: .picture}
 
 Введите название группы. В качестве названия я беру название мероприятия. Нажмите кнопку *Далее*.
 
@@ -82,7 +82,7 @@ PDF, английский язык.
 
 После создания группы, зайдите в неё, и нажмите кнопку *Позвонить*.
 
-![Начать звонок](/img//skype-obs-youtube-08.png){: .picture}
+![Начать звонок](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-08.png){: .picture}
 
 #### Создайте/настройте сцену в OBS Studio
 
@@ -95,35 +95,35 @@ OBS Studio позволяет создать *коллаж* из несколь�
 
 Пример того, как выглядит сцена с тремя источниками: статической картинкой на фоне и двумя собеседниками.
 
-![Пример настройки сцены в OBS Studio](/img//skype-obs-youtube-09.png){: .picture}
+![Пример настройки сцены в OBS Studio](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-09.png){: .picture}
 
 Чтобы добавить собеседника, нажмите *+* на панели *Sources* и затем *NDI™ Source*. После начала звонка в поле *Source name* можно выбрать любого собеседника из группового чата.
 
 Пример настройки собеседника с ником *markshevchenko*.
 
-![Пример настройки источника NDI™ Source](/img//skype-obs-youtube-10.png){: .picture}
+![Пример настройки источника NDI™ Source](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-10.png){: .picture}
 
 *TODO: доразобраться и дописать, как правильно настроить Transform для источника*
 
-![Пример настройки трансформации](/img//skype-obs-youtube-11.png){: .picture}
+![Пример настройки трансформации](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-11.png){: .picture}
 
 #### Запустите трансляцию
 
 Скопируйте в буфер обмена ключ трансляции со страницы YouTube.
 
-![Скопируйте ключ трансляции](/img//skype-obs-youtube-12.png){: .picture}
+![Скопируйте ключ трансляции](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-12.png){: .picture}
 
 Вернитесь в OBS Studio, нажмите кнопку *Settings*.
 
-![Нажмите кнопку Settings](/img//skype-obs-youtube-13.png){: .picture}
+![Нажмите кнопку Settings](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-13.png){: .picture}
 
 На вкладке *Stream* нажмите кнопку *Use Stream Key (advanced)*.
 
-![Нажмите кнопку Use Stream Key](/img//skype-obs-youtube-14.png){: .picture}
+![Нажмите кнопку Use Stream Key](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-14.png){: .picture}
 
 Вставьте ключ из буфера обмена в текстовое поле.
 
-![Вставьте ключ](/img//skype-obs-youtube-15.png){: .picture}
+![Вставьте ключ](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-15.png){: .picture}
 
 Нажмите кнопку *Ok*. Нажмите кнопку *Start Streaming*.
 
@@ -132,4 +132,4 @@ OBS Studio позволяет создать *коллаж* из несколь�
 Если всё прошло без проблем, кнопка *Начать трансляцию* на странице YouTube станет доступна. Самое время её нажать.
 У вас откроется страница трансляции. Оставьте её для контроля, только отключите звук в ролике YouTube.
 
-![Пример настройки трансформации](/img//skype-obs-youtube-16.png){: .picture}
+![Пример настройки трансформации](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-16.png){: .picture}
