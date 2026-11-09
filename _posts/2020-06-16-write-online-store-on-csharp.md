@@ -67,7 +67,7 @@ excerpt: "Онлайн-курс по C#, ООП, DDD, тестам, SOLID, па�
 
 ### Запись
 
-[Чат](/download/write-online-shop-on-csharp-1.txt)
+[Чат](/assets/texts/2020-06-16-write-online-store-on-csharp/write-online-shop-on-csharp-1.txt)
 
 <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/L2OC525fkGk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -83,7 +83,7 @@ excerpt: "Онлайн-курс по C#, ООП, DDD, тестам, SOLID, па�
 
 Модульное тестирование. Как разбивать код, чтобы покрывать его тестами.
 
-[Чат](/download/write-online-shop-on-csharp-2.txt)
+[Чат](/assets/texts/2020-06-16-write-online-store-on-csharp/write-online-shop-on-csharp-2.txt)
 
 ### Запись
 
@@ -101,7 +101,7 @@ excerpt: "Онлайн-курс по C#, ООП, DDD, тестам, SOLID, па�
 
 Как писать веб-приложения: ASP.NET Core, Razor, Сессии, как хранить корзину на сервере.
 
-[Чат](/download/write-online-shop-on-csharp-3.txt)
+[Чат](/assets/texts/2020-06-16-write-online-store-on-csharp/write-online-shop-on-csharp-3.txt)
 
 ### Запись
 
@@ -119,7 +119,7 @@ excerpt: "Онлайн-курс по C#, ООП, DDD, тестам, SOLID, па�
 
 Большой рефакторинг, агрегаты, репозитории.
 
-[Чат](/download/write-online-shop-on-csharp-4.txt)
+[Чат](/assets/texts/2020-06-16-write-online-store-on-csharp/write-online-shop-on-csharp-4.txt)
 
 ### Запись
 
@@ -140,7 +140,7 @@ Open Closed Principle (код, открытый для расширения и �
 
 Реализуем две истории: подтверждение номера телефона и доставка через постамат.
 
-[Чат](/download/write-online-shop-on-csharp-5.txt)
+[Чат](/assets/texts/2020-06-16-write-online-store-on-csharp/write-online-shop-on-csharp-5.txt)
 
 ### Запись
 
@@ -153,7 +153,7 @@ Open Closed Principle (код, открытый для расширения и �
 Реализуем заглушку платёжного сервиса. Razor Class Library.
 Плагины.
 
-[Чат](/download/write-online-shop-on-csharp-6.txt)
+[Чат](/assets/texts/2020-06-16-write-online-store-on-csharp/write-online-shop-on-csharp-6.txt)
 
 ### Запись
 
@@ -172,7 +172,7 @@ Open Closed Principle (код, открытый для расширения и �
 Entity Framework. Полнотекстовый поиск в EF Core и MS SQL.
 Как настроить время жизни служб, репозиториев и контекста БД.
 
-[Чат](/download/write-online-shop-on-csharp-7.txt)
+[Чат](/assets/texts/2020-06-16-write-online-store-on-csharp/write-online-shop-on-csharp-7.txt)
 
 ### Запись
 
@@ -184,7 +184,7 @@ Entity Framework. Полнотекстовый поиск в EF Core и MS SQL.
 
 Обработка ошибок в ASP.NET Core. Зачем асинхронное приложение. Ответы на вопросы.
 
-[Чат](/download/write-online-shop-on-csharp-8.txt)
+[Чат](/assets/texts/2020-06-16-write-online-store-on-csharp/write-online-shop-on-csharp-8.txt)
 
 ### Запись
 
