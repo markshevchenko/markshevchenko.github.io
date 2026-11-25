@@ -36,11 +36,11 @@ PDF, английский язык.
 
 Зайдите в Творческую студию и нажмите кнопку *Создать*. Выберите *Начать трансляцию*.
 
-![Начать трансляцию YouTube](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-04.png){: .picture}
+![Начать трансляцию YouTube](https://github.com/user-attachments/assets/e97b48fd-cb6f-4569-9dbe-8d0f0106d89d){: .picture}
 
 Откроется страница управления трансляциями. Нажмите кнопку *Запланировать трансляцию*. Пре первом запуске вам потребуется настроить параметры трансляции, при последующих вы можете использовать настройки предыдущей трансляции. Выбирайте вариант *Reuse settings*.
 
-![Использовать настройки предыдущей трансляции](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-05.png){: .picture}
+![Использовать настройки предыдущей трансляции](https://github.com/user-attachments/assets/a55e2978-79b3-43d0-ab16-71ba306547e4){: .picture}
 
 Поменяйте *Название* и *Описание*. **Не забудьте поменять *Значок*, если они разные в ваших трансляциях.**
 
@@ -48,7 +48,7 @@ PDF, английский язык.
 
 После создания скопируйте ссылку для анонса. Нажмите стрелку в правом верхнем углу (на рисунке обведена), чтобы открыть окно *Поделиться*. Ссылка на трансляцию — в нижней части окна.
 
-![Поделиться ссылкой](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-06.png){: .picture}
+![Поделиться ссылкой](https://github.com/user-attachments/assets/57cab56c-2786-4290-899b-75d883f39c25){: .picture}
 
 #### Заранее установите контакты со всеми собеседниками
 
@@ -60,21 +60,21 @@ PDF, английский язык.
 
 Зайдите в настройки Skype на **компьютере режиссёра**.
 
-![Зайти в настройки Skype](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-01.png){: .picture}
+![Зайти в настройки Skype](https://github.com/user-attachments/assets/a47c4b74-8f3c-4e62-a887-1b40b4bebc8e){: .picture}
 
 Выберите *Звонки*, затем *Дополнительно*.
 
-![Выбрать дополнительные настройки звонков](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-02.png){: .picture}
+![Выбрать дополнительные настройки звонков](https://github.com/user-attachments/assets/e925651a-938d-471d-8e2c-37990e3c79a2){: .picture}
 
 Разрешите использование NDI. **Важно. Этот шаг надо повторять каждый раз. Skype время от времени снимает этот переключатель. Кажется, что при выходе-входе.**
 
-![Разрешить использование NDI](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-03.png){: .picture}
+![Разрешить использование NDI](https://github.com/user-attachments/assets/38884412-5b16-444f-9fe9-66b303fcc5f7){: .picture}
 
 #### Создайте групповой чат в Skype
 
 В **режиссёрской учётке** создайте групповой чат.
 
-![Создать групповой чат в Skype](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-07.png){: .picture}
+![Создать групповой чат в Skype](https://github.com/user-attachments/assets/88f3d346-321c-4dda-b500-dca063a5c203){: .picture}
 
 Введите название группы. В качестве названия я беру название мероприятия. Нажмите кнопку *Далее*.
 
@@ -82,7 +82,7 @@ PDF, английский язык.
 
 После создания группы, зайдите в неё, и нажмите кнопку *Позвонить*.
 
-![Начать звонок](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-08.png){: .picture}
+![Начать звонок](https://github.com/user-attachments/assets/a0518289-1a2e-41fb-9965-10e235b3c59c){: .picture}
 
 #### Создайте/настройте сцену в OBS Studio
 
@@ -95,35 +95,35 @@ OBS Studio позволяет создать *коллаж* из несколь�
 
 Пример того, как выглядит сцена с тремя источниками: статической картинкой на фоне и двумя собеседниками.
 
-![Пример настройки сцены в OBS Studio](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-09.png){: .picture}
+![Пример настройки сцены в OBS Studio](https://github.com/user-attachments/assets/6795b3b6-9d43-415b-9f4e-e1b8d34b134c){: .picture}
 
 Чтобы добавить собеседника, нажмите *+* на панели *Sources* и затем *NDI™ Source*. После начала звонка в поле *Source name* можно выбрать любого собеседника из группового чата.
 
 Пример настройки собеседника с ником *markshevchenko*.
 
-![Пример настройки источника NDI™ Source](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-10.png){: .picture}
+![Пример настройки источника NDI™ Source](https://github.com/user-attachments/assets/fb6234f6-d7a5-461b-be30-aac7d407ebc0){: .picture}
 
 *TODO: доразобраться и дописать, как правильно настроить Transform для источника*
 
-![Пример настройки трансформации](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-11.png){: .picture}
+![Пример настройки трансформации](https://github.com/user-attachments/assets/a59ae2c5-82fa-489e-9fc1-5261d67835fc){: .picture}
 
 #### Запустите трансляцию
 
 Скопируйте в буфер обмена ключ трансляции со страницы YouTube.
 
-![Скопируйте ключ трансляции](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-12.png){: .picture}
+![Скопируйте ключ трансляции](https://github.com/user-attachments/assets/b2d947cb-5bac-4e53-81a0-6cbe7ffba92f){: .picture}
 
 Вернитесь в OBS Studio, нажмите кнопку *Settings*.
 
-![Нажмите кнопку Settings](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-13.png){: .picture}
+![Нажмите кнопку Settings](https://github.com/user-attachments/assets/01f76897-39fc-4ff8-910b-6776a346f608){: .picture}
 
 На вкладке *Stream* нажмите кнопку *Use Stream Key (advanced)*.
 
-![Нажмите кнопку Use Stream Key](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-14.png){: .picture}
+![Нажмите кнопку Use Stream Key](https://github.com/user-attachments/assets/ec5fb2b2-1a05-4b86-a6ea-527c4eb8b79e){: .picture}
 
 Вставьте ключ из буфера обмена в текстовое поле.
 
-![Вставьте ключ](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-15.png){: .picture}
+![Вставьте ключ](https://github.com/user-attachments/assets/dd708a88-1a1a-4eae-b619-b4d28ef9e231){: .picture}
 
 Нажмите кнопку *Ok*. Нажмите кнопку *Start Streaming*.
 
@@ -132,4 +132,4 @@ OBS Studio позволяет создать *коллаж* из несколь�
 Если всё прошло без проблем, кнопка *Начать трансляцию* на странице YouTube станет доступна. Самое время её нажать.
 У вас откроется страница трансляции. Оставьте её для контроля, только отключите звук в ролике YouTube.
 
-![Пример настройки трансформации](/articles/skype-obs-youtube-cheat-sheet/skype-obs-youtube-16.png){: .picture}
+![Пример настройки трансформации](https://github.com/user-attachments/assets/b9e99fce-8f9e-4374-b698-ff9851c942a7){: .picture}
