@@ -9,7 +9,7 @@ excerpt: "Онлайн-доклад для .NET Community."
 
 Исследуем историю языков программирования. Посмотрим, что волновало программистов в прошлом, и как это повлияло на современный мир.
 
-[Слайды](/download/history-of-program-languages-for-csharp-programmers.pdf)
+[Слайды](https://github.com/user-attachments/files/35411522/history-of-program-languages-for-csharp-programmers.pdf)
 
 <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/XPnVY88BUik?start=4950" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
