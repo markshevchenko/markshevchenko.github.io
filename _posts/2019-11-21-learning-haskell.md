@@ -11,16 +11,16 @@ excerpt:
 
 Радует сама возможность. Собираемся в [хакспейсе «Нейрон»](http://neuronspace.ru/) — такое антикафе для гиков. Разобранные телевизоры, паяльники, тёплый ламповый звук, прочие радости жизни. Хакспейс находится в самом центре Москвы, на Китай городе, в очень живописном дворике.
 
-![Хакспейс «Нейрон»](/assets/images/posts/2019-11-21-learning-haskell/haskell-1.jpg){: .picture}
+![Хакспейс «Нейрон»](https://github.com/user-attachments/assets/aa1a6a65-7659-4b4d-9480-53f29c39ddc7){: .picture}
 
 Внутри всё как в XIX веке.
 
-![Внутреннее убранство](/assets/images/posts/2019-11-21-learning-haskell/haskell-2.jpg){: .picture}
+![Внутреннее убранство](https://github.com/user-attachments/assets/f19f426e-856d-49f4-9c8b-35747a870d2b){: .picture}
 
 Эти люди собираются изучать Хаскель. За два месяца тридцать человек превратились в десять. Функциональное программирование, это вам не просто так!
 
-![Надежда человечества, часть I](/assets/images/posts/2019-11-21-learning-haskell/haskell-3.jpg){: .picture}
-![Надежда человечества, часть II](/assets/images/posts/2019-11-21-learning-haskell/haskell-4.jpg){: .picture}
+![Надежда человечества, часть I](https://github.com/user-attachments/assets/a95caf32-5e87-4652-ad67-077eb3ebdc0e){: .picture}
+![Надежда человечества, часть II](https://github.com/user-attachments/assets/8b2b3c7b-51fd-445b-a7f2-2a4b38d3ea6c){: .picture}
 
 ### Лекции Алексея по функциональному программированию
 
