@@ -1,7 +1,7 @@
 ---
 title: "Завершил перевод Designing With Types"
 date: 2026-05-12 09:00:00+03:00
-excerpt: "Плюс, у меня есть ещё переводы"
+excerpt: "Плюс, у меня есть ещё переводы."
 ---
 
 На днях завершил перевод цикла [Designing With Types](https://fsharpforfunandprofit.com/series/designing-with-types/).
