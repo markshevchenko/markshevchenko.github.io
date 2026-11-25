@@ -13,4 +13,4 @@ excerpt: "Открытая лекция для студентов экономи
 
 Видео доклада доступно [ВКонтакте](https://vk.com/wall-73693612_5072).
 
-[Слайды](/download/it-project-management-for-humanitarians.pdf).
+[Слайды](https://github.com/user-attachments/files/35411634/it-project-management-for-humanitarians.pdf).
