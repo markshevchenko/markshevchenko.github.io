@@ -15,7 +15,7 @@ class: center, middle
 
 &laquo;Мы команда&raquo; в корпоративном мире означает, что надо задержаться на работе.
 
-.center.half-width[![Рабы на галерах](01-galleys.jpg)]
+.center.half-width[![Рабы на галерах](https://github.com/user-attachments/assets/286fa8ab-652b-456d-903a-1c1affccaaa6)]
 
 ---
 
@@ -23,11 +23,11 @@ class: center, middle
 
 &laquo;Мы команда&raquo; в корпоративном мире означает, что надо задержаться на работе.
 
-.center.half-width[![Рабы на галерах](01-galleys.jpg)]
+.center.half-width[![Рабы на галерах](https://github.com/user-attachments/assets/286fa8ab-652b-456d-903a-1c1affccaaa6)]
 
 В туристическом мире &laquo;мы команда&raquo; значит кое-что другое.
 
-.center.half-width[![Катамаран](02-catamaran.jpg)]
+.center.half-width[![Катамаран](https://github.com/user-attachments/assets/afb9be2a-1a49-437f-87fd-d961dc057aaa)]
 
 ---
 
@@ -35,7 +35,7 @@ class: center, middle
 
 Хорошая аналогия. Слово Scrum пришло к нам из регби.
 
-.center.half-width[![Куча-мала](03-scrum.jpg)]
+.center.half-width[![Куча-мала](https://github.com/user-attachments/assets/b258c433-7772-482d-8f36-f244c2361eb3)]
 
 ---
 
@@ -43,12 +43,12 @@ class: center, middle
 
 Хорошая аналогия. Слово Scrum пришло к нам из регби.
 
-.center.half-width[![Куча-мала](03-scrum.jpg)]
+.center.half-width[![Куча-мала](https://github.com/user-attachments/assets/b258c433-7772-482d-8f36-f244c2361eb3)]
 
 Однако, аналогия ложная. В спорте все команды небольшие,
 а в бизнесе команда может состоять из трехсот человек.
 
-.center.half-width[![Куча-мала](04-big-team.jpg)]
+.center.half-width[![Куча-мала](https://github.com/user-attachments/assets/583f4397-d78b-4217-b722-765606ef52df)]
 
 ---
 
@@ -68,7 +68,7 @@ class: center, middle
 
 В подразделении работает статистика, а в группе нет.
 
-.center.half-width[![Куча-мала](05-spreadhead-area.jpg)]
+.center.half-width[![Куча-мала](https://github.com/user-attachments/assets/dc6536e7-873a-4a51-8f0f-85a8a4a62cd1)]
 
 Разведгруппа&nbsp;&mdash; хорошая аналогия. Показывает, что бывают крупные команды обычных людей,
 а бывают некрупные команды супергеров, которые нам как раз и интересны.
@@ -77,7 +77,7 @@ class: center, middle
 
 # Почему не Рэмбо?
 
-.center.half-width[![Куча-мала](06-rambo.jpg)]
+.center.half-width[![Куча-мала](https://github.com/user-attachments/assets/d93aa058-739c-4368-ad46-893bc0faa997)]
 
 1. &laquo;Фактор грузовика&raquo; равен единице.
 
@@ -85,7 +85,7 @@ class: center, middle
 
 # Почему не Рэмбо?
 
-.center.half-width[![Куча-мала](06-rambo.jpg)]
+.center.half-width[![Куча-мала](https://github.com/user-attachments/assets/d93aa058-739c-4368-ad46-893bc0faa997)]
 
 1. &laquo;Фактор грузовика&raquo; равен единице.
 1. Небольшие задачи.
@@ -94,7 +94,7 @@ class: center, middle
 
 # Почему не Рэмбо?
 
-.center.half-width[![Куча-мала](06-rambo.jpg)]
+.center.half-width[![Куча-мала](https://github.com/user-attachments/assets/d93aa058-739c-4368-ad46-893bc0faa997)]
 
 1. &laquo;Фактор грузовика&raquo; равен единице.
 1. Небольшие задачи.
